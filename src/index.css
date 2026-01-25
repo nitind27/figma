@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-gradient {
+    background: linear-gradient(138.35deg, #00C4FF 0%, #333493 94.79%);
+  }
+  
+  .btn-gradient:hover {
+    background: linear-gradient(138.35deg, #00B0E6 0%, #2A2A7A 94.79%);
+  }
+}
+
