@@ -11,7 +11,7 @@ const SecondHeroSection = () => {
         }}
       ></div>
       <div className="absolute inset-0 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/70"></div>
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

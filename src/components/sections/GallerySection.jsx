@@ -26,11 +26,11 @@ const GallerySection = ({ images }) => {
             // Top row: 3 images, Bottom row: 3 images
             // Top-right (Yoga Session) is taller, creating dynamic look
             const layoutConfig = [
-              { height: 'h-64 md:h-72 lg:h-[320px]' },  // Top-left: Martial Arts - medium height
-              { height: 'h-64 md:h-80 lg:h-[280px]' },  // Top-middle: Award Ceremony - medium height
+              { height: 'h-64 md:h-72 lg:h-[280px]' },  // Top-left: Martial Arts - medium height
+              { height: 'h-64 md:h-80 lg:h-[320px]' },  // Top-middle: Award Ceremony - medium height
               { height: 'h-64 md:h-96 lg:h-[400px]' },  // Top-right: Yoga Session - TALLER
-              { height: 'h-64 md:h-80 lg:h-[300px]' },  // Bottom-left: Student Activities - medium
-              { height: 'h-64 md:h-72 lg:h-[280px]' },  // Bottom-middle: Kargil Vijay Diwas - medium
+              { height: 'h-64 md:h-80 lg:h-[400px]' },  // Bottom-left: Student Activities - medium
+              { height: 'h-64 md:h-72 lg:h-[320px]' },  // Bottom-middle: Kargil Vijay Diwas - medium
               { height: 'h-64 md:h-80 lg:h-[300px]' },  // Bottom-right: Panel Discussion - medium
             ]
             const config = layoutConfig[index % layoutConfig.length]
