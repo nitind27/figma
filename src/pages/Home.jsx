@@ -11,82 +11,99 @@ const Home = () => {
 
   const featureCards = [
     {
-      icon: '📚',
+      icon: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+          <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+        </svg>
+      ),
       title: 'School Library',
-      description: 'Access to thousands of books and digital resources for comprehensive learning.',
+      description: 'The student and teacher handbooks',
     },
     {
-      icon: '🚌',
+      icon: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+          <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+        </svg>
+      ),
       title: 'Bus Schedule',
-      description: 'Convenient transportation services with safe and timely bus schedules.',
+      description: 'The theme is carried over into family',
     },
     {
-      icon: '🏫',
-      title: 'School Facilities',
-      description: 'State-of-the-art facilities for academic and extracurricular activities.',
+      icon: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <path d="M16 2v4M8 2v4M3 10h18"/>
+        </svg>
+      ),
+      title: 'School Calendar',
+      description: 'All students had to bring at least.',
     },
     {
-      icon: '📖',
-      title: 'Academic Programs',
-      description: 'Comprehensive curriculum designed for holistic student development.',
+      icon: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+          <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      ),
+      title: 'School Fees',
+      description: 'Create a happy environment for your child in which they can thrive.',
     },
   ]
 
   const educationOfferings = [
     {
-      icon: '🏛️',
+      icon: <img src="/svg/XMLID_817_.svg" alt="Classroom" className="w-7 h-7" />,
       title: 'Classroom',
-      description: 'Modern, well-equipped classrooms with smart boards and comfortable seating.',
+      description: <>our well-designed classrooms are<br /> perfectly embellished with proper<br /> room for ventilation and natural<br /> light.</>,
     },
     {
-      icon: '💻',
+      icon: <img src="/svg/XMLID_817_.svg" alt="Computer Lab" className="w-7 h-7" />,
       title: 'Computer Lab',
-      description: 'Fully equipped computer labs with latest technology and high-speed internet.',
+      description: <>Our computer lab has extensive<br /> range of equipment that rightly<br /> fulfills the need of our day<br />-to-day work.</>,
     },
     {
-      icon: '🔬',
+      icon: <img src="/svg/XMLID_817_.svg" alt="Laboratory" className="w-7 h-7" />,
       title: 'Laboratory',
-      description: 'Advanced laboratories for hands-on scientific experiments and learning.',
+      description: <>A well-organized laboratory is a<br /> vital source of practical learning<br /> for students. Our laboratory is<br /> designed.</>,
     },
     {
-      icon: '⚗️',
+      icon: <img src="/svg/XMLID_817_.svg" alt="Science Lab" className="w-7 h-7" />,
       title: 'Science Lab',
-      description: 'State-of-the-art science labs for Physics, Chemistry, and Biology.',
+      description: <>LPS is well-known for instilling<br /> discipline and enriching every<br /> aspect of a student's life. At LPS, we<br /> believe in teaching our students...</>,
     },
     {
-      icon: '⚽',
+      icon: <img src="/svg/XMLID_817_.svg" alt="Playground" className="w-7 h-7" />,
       title: 'Playground',
-      description: 'Spacious playgrounds for sports and physical activities.',
+      description: 'A fun-filled opportunity with an array of outdoor games and activities, our playground offers enough',
     },
     {
-      icon: '📚',
+      icon: <img src="/svg/XMLID_817_.svg" alt="Library" className="w-7 h-7" />,
       title: 'Library',
-      description: 'Extensive library with books, journals, and digital resources.',
+      description: 'Our library offers access to a variety of resources with new knowledge and personal development.',
     },
     {
-      icon: '🧪',
+      icon: <img src="/svg/XMLID_817_.svg" alt="Chemistry Lab" className="w-7 h-7" />,
       title: 'Chemistry Lab',
-      description: 'Well-equipped chemistry laboratory for practical experiments.',
+      description: 'Learning chemistry is an absolute fun at our school. The overall setting, equipment and environmen',
     },
     {
-      icon: '🌱',
+      icon: <img src="/svg/XMLID_817_.svg" alt="Biology Lab" className="w-7 h-7" />,
       title: 'Biology Lab',
-      description: 'Modern biology lab with microscopes and specimen collections.',
+      description: 'The biology lab is well-structured and equipped with all the necessary tools and equipment. This lab',
     },
     {
-      icon: '⚛️',
+      icon: <img src="/svg/XMLID_817_.svg" alt="Physics Lab" className="w-7 h-7" />,
       title: 'Physics Lab',
-      description: 'Advanced physics laboratory with modern equipment and instruments.',
+      description: 'Conducting experiments in a lab is the fundamental of effective learning. Our school applies the same',
     },
   ]
 
   const galleryImages = [
-    { id: 1, title: 'Martial Arts', icon: '🥋' },
-    { id: 2, title: 'Award Ceremony', icon: '🏆' },
-    { id: 3, title: 'Yoga Session', icon: '🧘' },
-    { id: 4, title: 'Student Activities', icon: '👥' },
-    { id: 5, title: 'Kargil Vijay Diwas', icon: '🇮🇳' },
-    { id: 6, title: 'Panel Discussion', icon: '💬' },
+    { id: 5, title: 'Kargil Vijay Diwas', image: '/gallery/8fd26a07fee815dfedd9961efe54556f4c61cd4b.jpg' },
+    { id: 1, title: 'Martial Arts', image: '/gallery/67e9ff829b918ec4cac0b4fd5689f133e2a4e6f2.jpg' },
+    { id: 4, title: 'Student Activities', image: '/gallery/772d21f889d1b48b41031fa3d450ccaee720390e.jpg' },
+    { id: 3, title: 'Yoga Session', image: '/gallery/713d3d8b7f0b0a674e3141c8b282d8af8fc11f03.jpg' },
+    { id: 6, title: 'Panel Discussion', image: '/gallery/a107eb46a3a80b0bed064dcfc75fa411a8c48a74.jpg' },
+    { id: 2, title: 'Award Ceremony', image: '/gallery/6c3e3dd551b6b26721b711c2b843dbdc9ec8da40.jpg' },
   ]
 
   const faqItems = [

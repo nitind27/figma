@@ -39,6 +39,7 @@ const DonutChart = ({ data, size = 120 }) => {
   const total = data.reduce((sum, item) => sum + item.percentage, 0)
   const winsData = data.find((item) => item.label === 'Wins')
   const winsValue = winsData?.value || Math.round((winsData?.percentage || 0) / 100 * 31)
+  const winsPercentage = winsData?.percentage || 0
 
   return (
     <div className="flex flex-col items-center">
@@ -70,7 +71,8 @@ const DonutChart = ({ data, size = 120 }) => {
           y={size / 2 - 5}
           textAnchor="middle"
           dominantBaseline="middle"
-          className="fill-gray-800 font-bold text-sm"
+          className="fill-gray-800 font-bold"
+          fontSize="14"
           transform={`rotate(90 ${size / 2} ${size / 2})`}
         >
           {winsValue} Wins
@@ -80,10 +82,11 @@ const DonutChart = ({ data, size = 120 }) => {
           y={size / 2 + 12}
           textAnchor="middle"
           dominantBaseline="middle"
-          className="fill-gray-600 text-xs"
+          className="fill-gray-500"
+          fontSize="11"
           transform={`rotate(90 ${size / 2} ${size / 2})`}
         >
-          2%
+          ({winsPercentage}%)
         </text>
       </svg>
     </div>
