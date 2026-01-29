@@ -159,7 +159,7 @@ const Home = () => {
 
   const galleryImages = [
     { id: 5, title: 'Kargil Vijay Diwas', image: '/gallery/8fd26a07fee815dfedd9961efe54556f4c61cd4b.jpg' },
-    { id: 1, title: 'Martial Arts', image: '/gallery/67e9ff829b918ec4cac0b4fd5689f133e2a4e6f2.jpg' },
+    { id: 1, title: 'Martial Arts', image: '/gallery/5808cd2037118da14955030d29574b69aa3d1e78.png' },
     { id: 4, title: 'Student Activities', image: '/gallery/772d21f889d1b48b41031fa3d450ccaee720390e.jpg' },
     { id: 3, title: 'Yoga Session', image: '/gallery/713d3d8b7f0b0a674e3141c8b282d8af8fc11f03.jpg' },
     { id: 6, title: 'Panel Discussion', image: '/gallery/a107eb46a3a80b0bed064dcfc75fa411a8c48a74.jpg' },
@@ -201,10 +201,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             <div className="flex-1 bg-white rounded-2xl p-8 md:p-10 lg:p-12">
-              <FAQSection faqItems={faqItems} />
+      <FAQSection faqItems={faqItems} />
             </div>
             <div className="flex-1 bg-white rounded-2xl p-8 md:p-10 lg:p-12">
-              <ContactFormSection />
+      <ContactFormSection />
             </div>
           </div>
         </div>

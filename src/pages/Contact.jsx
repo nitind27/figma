@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -104,248 +105,385 @@ const Contact = () => {
 
   return (
     <div className="pt-16 md:pt-20">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section - background image with dark overlay, centered content */}
+      <section className="relative text-white py-16 md:py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(/gallery/6c3e3dd551b6b26721b711c2b843dbdc9ec8da40.jpg)' }}
+          aria-hidden
+        />
+        <div className="absolute inset-0 bg-black/60" aria-hidden />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[280px] md:min-h-[320px]">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center max-w-[1171px] w-full"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Contact Us
             </h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
-              We'd love to hear from you. Get in touch with us today.
+            <p className="text-lg md:text-xl max-w-3xl mx-auto text-white leading-relaxed mb-8">
             </p>
+
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      {/* Contact Info Cards Section */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Contact Info */}
-            <div className="lg:col-span-1">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Address Card */}
+            <div className="flex flex-col items-center text-center p-6 bg-white rounded-[30px]" style={{ boxShadow: '0px 12.98px 18.97px 0px rgba(0, 0, 0, 0.07)' }}>
+              <div className="mb-4 flex items-center justify-center" style={{
+                width: "69.91px",
+                height: "69.91px",
+                borderRadius: "18.4px",
+                backgroundColor: "#3E4096"
+              }}>
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">ADDRESS</h3>
+              <p 
+                style={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: 500,
+                  fontSize: "14px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#9F9F9F",
+                  textAlign: "center"
+                }}
               >
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Get in Touch
-                </h2>
-                <p className="text-gray-600 mb-8">
-                  Have questions or want to learn more? We're here to help.
-                  Reach out to us through any of the following ways.
-                </p>
-
-                <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="flex items-start space-x-4"
-                    >
-                      <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center">
-                        {info.icon}
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">
-                          {info.title}
-                        </h3>
-                        <p className="text-gray-600">{info.content}</p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* Social Media */}
-                <div className="mt-8">
-                  <h3 className="font-semibold text-gray-900 mb-4">
-                    Follow Us
-                  </h3>
-                  <div className="flex space-x-4">
-                    {['Facebook', 'Twitter', 'Instagram', 'LinkedIn'].map(
-                      (social) => (
-                        <motion.a
-                          key={social}
-                          href="#"
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
-                        >
-                          <span className="text-sm font-semibold">
-                            {social[0]}
-                          </span>
-                        </motion.a>
-                      )
-                    )}
-                  </div>
-                </div>
-              </motion.div>
+                LPS School, 44, Varsha Society 2, Varachha, Surat, Gujarat - 395006
+              </p>
             </div>
 
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="bg-white p-8 rounded-2xl shadow-lg"
+            {/* Working Hours Card */}
+            <div className="flex flex-col items-center text-center p-6 bg-white rounded-[30px]" style={{ boxShadow: '0px 12.98px 18.97px 0px rgba(0, 0, 0, 0.07)' }}>
+              <div className="mb-4 flex items-center justify-center" style={{
+                width: "69.91px",
+                height: "69.91px",
+                borderRadius: "18.4px",
+                backgroundColor: "#3E4096"
+              }}>
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">WORKING HOURS</h3>
+              <p 
+                style={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: 500,
+                  fontSize: "14px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#9F9F9F",
+                  textAlign: "center",
+                  marginBottom: "1rem"
+                }}
               >
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Send us a Message
-                </h2>
+                Mon - Sat: 7:00 a.m- 6:00 p.m
+              </p>
+              <p 
+                style={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: 500,
+                  fontSize: "14px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#9F9F9F",
+                  textAlign: "center"
+                }}
+              >
+                Sunday: 9:00 a.m- 1:00 p.m
+              </p>
+            </div>
 
-                {submitted && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg"
-                  >
-                    Thank you! Your message has been sent successfully.
-                  </motion.div>
-                )}
+            {/* Phone Card */}
+            <div className="flex flex-col items-center text-center p-6 bg-white rounded-[30px]" style={{ boxShadow: '0px 12.98px 18.97px 0px rgba(0, 0, 0, 0.07)' }}>
+              <div className="mb-4 flex items-center justify-center" style={{
+                width: "69.91px",
+                height: "69.91px",
+                borderRadius: "18.4px",
+                backgroundColor: "#3E4096"
+              }}>
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">PHONE</h3>
+              <p 
+                style={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: 500,
+                  fontSize: "14px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#9F9F9F",
+                  textAlign: "center",
+                  marginBottom: "1rem"
+                }}
+              >
+                Reception - +91- 6357470001
+              </p>
+              <p 
+                style={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: 500,
+                  fontSize: "14px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#9F9F9F",
+                  textAlign: "center",
+                  marginBottom: "1rem"
+                }}
+              >
+                Addmission - +91-6357470002
+              </p>
+              <p 
+                style={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: 500,
+                  fontSize: "14px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#9F9F9F",
+                  textAlign: "center"
+                }}
+              >
+                Fees Enquiry - +91-6357470003
+              </p>
+            </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-sm font-medium text-gray-700 mb-2"
-                      >
-                        Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
-                        placeholder="Your Name"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-gray-700 mb-2"
-                      >
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
-                        placeholder="your.email@example.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label
-                        htmlFor="phone"
-                        className="block text-sm font-medium text-gray-700 mb-2"
-                      >
-                        Phone
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
-                        placeholder="+91 1234567890"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="subject"
-                        className="block text-sm font-medium text-gray-700 mb-2"
-                      >
-                        Subject *
-                      </label>
-                      <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
-                        placeholder="Subject"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all resize-none"
-                      placeholder="Your message here..."
-                    />
-                  </div>
-
-                  <motion.button
-                    type="submit"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full md:w-auto px-8 py-3 btn-gradient text-white rounded-lg font-semibold transition-all shadow-lg"
-                  >
-                    Send Message
-                  </motion.button>
-                </form>
-              </motion.div>
+            <div className="flex flex-col items-center text-center p-6 bg-white rounded-[30px]" style={{ boxShadow: '0px 12.98px 18.97px 0px rgba(0, 0, 0, 0.07)' }}>
+              <div className="mb-4 flex items-center justify-center" style={{
+                width: "69.91px",
+                height: "69.91px",
+                borderRadius: "18.4px",
+                backgroundColor: "#3E4096"
+              }}>
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">EMAIL</h3>
+              <p 
+                style={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: 500,
+                  fontSize: "14px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#9F9F9F",
+                  textAlign: "center",
+                  marginBottom: "1rem"
+                }}
+              >
+                Info@lpsavani.in
+              </p>
+              <p 
+                style={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: 500,
+                  fontSize: "14px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#9F9F9F",
+                  textAlign: "center"
+                }}
+              >
+                Info.k@lpsavani.in
+              </p>
             </div>
           </div>
         </div>
       </section>
+      <section className="w-full bg-[#F8FAFC] py-20">
+  {/* Heading */}
+  <div className="text-center mb-16">
+    <h2 className="font-poppins font-bold text-[40px] leading-[50px] tracking-[0.2px] text-[#252B42]">
+      Contact Us
+    </h2>
+    <p className="mt-3 text-[16px] text-[#737373]">
+      Have questions? Reach out to us today.
+    </p>
+  </div>
 
-      {/* Map Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-8"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Find Us on Map
-            </h2>
-          </motion.div>
-          <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
-            <p className="text-gray-500">Map will be embedded here</p>
+  {/* Main Box */}
+  <div className="max-w-7xl mx-auto flex items-center justify-center gap-10 px-6">
+    
+    {/* Left Image */}
+   <div className="w-[493px] h-[672px] rounded-[40px] overflow-hidden">
+  <img
+    src="/gallery/8fd26a07fee815dfedd9961efe54556f4c61cd4b.jpg"
+    alt="Contact"
+    className="w-full h-full object-cover"
+  />
+</div>
+
+    {/* Right Form Card */}
+    <div className="w-[662px] h-[672px] bg-white rounded-2xl p-10 shadow-lg">
+      <form className="space-y-6">
+
+        {/* First & Last Name */}
+        <div className="grid grid-cols-2 gap-6">
+         <div>
+  <label className="block mb-2 font-medium text-[#3E4096]">
+    First Name
+  </label>
+  <input
+    type="text"
+    placeholder="Enter First Name"
+    className="w-full h-[48px] rounded-lg border border-[#E6E6E6] px-4 outline-none"
+  />
+</div>
+
+          <div>
+            <label className="block mb-2 font-medium text-[#3E4096]">
+              Last Name
+            </label>
+            <input
+              type="text"
+              placeholder="Enter Last Name"
+              className="w-full h-[48px] rounded-lg border border-[#3E4096] px-4 outline-none"
+            />
           </div>
         </div>
-      </section>
+
+        {/* Email & Subject */}
+        <div className="grid grid-cols-2 gap-6">
+          <div>
+            <label className="block mb-2 font-medium text-[#3E4096]">
+              Email
+            </label>
+            <input
+              type="email"
+              placeholder="Enter email"
+              className="w-full h-[48px] rounded-lg border border-[#3E4096] px-4 outline-none"
+            />
+          </div>
+
+          <div>
+            <label className="block mb-2 font-medium text-[#3E4096]">
+              Subject
+            </label>
+            <input
+              type="text"
+              placeholder="Enter Your Subject"
+              className="w-full h-[48px] rounded-lg border border-[#3E4096] px-4 outline-none"
+            />
+          </div>
+        </div>
+
+        {/* Number */}
+        <div>
+          <label className="block mb-2 font-medium text-[#3E4096]">
+            Number
+          </label>
+          <input
+            type="text"
+            placeholder="Contact Number"
+            className="w-full h-[48px] rounded-lg border border-[#E6E6E6] px-4 outline-none"
+          />
+        </div>
+
+        {/* Message */}
+        <div>
+          <label className="block mb-2 font-medium text-[#3E4096]">
+            Message
+          </label>
+         <textarea
+  rows="4"
+  placeholder="Enter Your Message"
+  className="
+    w-full
+    border
+    border-[#E1E1E1]
+    rounded-[10px]
+    px-4
+    py-3
+    text-sm
+    outline-none
+    focus:ring-2
+    focus:ring-[#3E3F95]
+  "
+></textarea>
+        </div>
+
+        {/* Footer */}
+        <div className="flex items-center justify-between pt-4">
+         <p
+  className="
+    text-[14px]
+    leading-[20px]
+    text-[#E1E1E1]
+    font-poppins
+    mt-6
+  "
+>
+  All fields are obligatory
+</p>
+         <button
+  type="submit"
+  className="
+    w-[199.28px]
+    h-[59px]
+    rounded-[4.15px]
+    bg-gradient-to-r
+    from-[#00C3FF]
+    to-[#333493]
+    text-white
+    font-medium
+    text-base
+    flex
+    items-center
+    justify-center
+    transition
+    hover:opacity-90
+  "
+>
+  Submit
+</button>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+{/* Google Map Section */}
+<section className="w-full bg-white py-20">
+  <div className="max-w-7xl mx-auto px-6">
+
+  
+
+    {/* Map */}
+    <div className="w-full h-[450px] rounded-[20px] overflow-hidden shadow-lg">
+      <iframe
+        src="https://www.google.com/maps?q=Surat,Gujarat&output=embed"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Google Map"
+      ></iframe>
+    </div>
+
+  </div>
+</section>
+
+
+
+
     </div>
   )
 }
