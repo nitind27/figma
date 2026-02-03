@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 const GallerySection = ({ images }) => {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -15,46 +15,37 @@ const GallerySection = ({ images }) => {
             Gallery
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Information for teachers and students, parenting<br /> information and
-            education news.
+            Information for teachers and students, parenting information and education news.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-max">
-          {images.map((image, index) => {
-            // Match exact layout from image - create collage effect with varied heights
-            // Top row: 3 images, Bottom row: 3 images
-            // Top-right (Yoga Session) is taller, creating dynamic look
-            const layoutConfig = [
-              { height: 'h-64 md:h-72 lg:h-[280px]' },  // Top-left: Martial Arts - medium height
-              { height: 'h-64 md:h-80 lg:h-[320px]' },  // Top-middle: Award Ceremony - medium height
-              { height: 'h-64 md:h-96 lg:h-[400px]' },  // Top-right: Yoga Session - TALLER
-              { height: 'h-64 md:h-80 lg:h-[400px]' },  // Bottom-left: Student Activities - medium
-              { height: 'h-64 md:h-72 lg:h-[320px]' },  // Bottom-middle: Kargil Vijay Diwas - medium
-              { height: 'h-64 md:h-80 lg:h-[300px]' },  // Bottom-right: Panel Discussion - medium
-            ]
-            const config = layoutConfig[index % layoutConfig.length]
-            
-            return (
-              <motion.div
-                key={image.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
-                className="rounded-xl cursor-pointer"
-              >
-                <div className={`relative ${config.height} overflow-hidden`}>
-                  <img 
-                    src={image.image} 
-                    alt={image.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </motion.div>
-            )
-          })}
+        {/* - aspect-square ya aspect-video use karke sabko ek size mein laya gaya hai
+           - md:grid-cols-3 se 3 equal columns banenge
+        */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {images.map((image, index) => (
+            <motion.div
+              key={image.id || index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.03 }}
+              className="group relative"
+            >
+              {/* aspect-[4/3] se images landscape format mein ek barabar alignment mein aayengi */}
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-md bg-gray-100">
+                <img
+                  src={image.image}
+                  alt={image.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                
+                {/* Hover Effect (Optional): Image par hover karne par halka shadow/overlay */}
+                <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
@@ -62,4 +53,3 @@ const GallerySection = ({ images }) => {
 }
 
 export default GallerySection
-

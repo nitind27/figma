@@ -15,7 +15,7 @@ const EducationalOfferings = ({ offerings }) => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             <p> The Education of Tomorrow, Rooted in</p> <p> Tradition Invite You</p>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-[#737373] max-w-3xl mx-auto">
             Our purpose is to provide a safe, happy environment for your child where they are able to be themselves and thrive while acquiring the educational foundation needed to achieve this.
           </p>
         </motion.div>
@@ -60,9 +60,9 @@ const EducationalOfferings = ({ offerings }) => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 inline-block pb-4 relative">
                 {item.title}
-                <span className="absolute bottom-0 left-0 w-1/2 h-[3px] bg-blue-600"></span>
+                <span className="absolute bottom-0 left-0 w-1/2 h-[3px] bg-[#3E3F95]"></span>
               </h3>
-              <p className="text-gray-700 mb-4 leading-relaxed text-sm">
+              <p className="text-[#737373] mb-4 leading-relaxed text-sm">
                 {item.description}
               </p>
               <Link

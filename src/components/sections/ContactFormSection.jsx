@@ -22,46 +22,75 @@ const ContactFormSection = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <form className="space-y-5">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+        <form className="space-y-6">
+          {/* Name Field */}
+          <div className="relative">
+            <input
+              type="text"
+              id="name"
+              className="w-full px-4 py-4 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none peer placeholder-transparent"
+              placeholder="Your Name"
+              required
+            />
+            <label
+              htmlFor="name"
+              className="absolute left-4 top-4 text-gray-500 text-sm transition-all duration-200 transform origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-blue-500 peer-valid:scale-75 peer-valid:-translate-y-6 peer-valid:text-blue-500 bg-gray-100 px-1"
+            >
               Your Name
             </label>
-            <input
-              type="text"
-              className="w-full px-4 py-3 bg-gray-100 border border-blue-400 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none"
-            />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Email Address
-            </label>
+
+          {/* Email Field */}
+          <div className="relative">
             <input
               type="email"
-              placeholder="Enter Your Email"
-              className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none"
+              id="email"
+              className="w-full px-4 py-4 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none peer placeholder-transparent"
+              placeholder="Email Address"
+              required
             />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Your Subject
+            <label
+              htmlFor="email"
+              className="absolute left-4 top-4 text-gray-500 text-sm transition-all duration-200 transform origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-blue-500 peer-valid:scale-75 peer-valid:-translate-y-6 peer-valid:text-blue-500 bg-gray-100 px-1"
+            >
+              Email Address
             </label>
+          </div>
+
+          {/* Subject Field */}
+          <div className="relative">
             <input
               type="text"
-              placeholder="Enter Your Subject"
-              className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none"
+              id="subject"
+              className="w-full px-4 py-4 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none peer placeholder-transparent"
+              placeholder="Your Subject"
+              required
             />
+            <label
+              htmlFor="subject"
+              className="absolute left-4 top-4 text-gray-500 text-sm transition-all duration-200 transform origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-blue-500 peer-valid:scale-75 peer-valid:-translate-y-6 peer-valid:text-blue-500 bg-gray-100 px-1"
+            >
+              Your Subject
+            </label>
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+
+          {/* Message Field */}
+          <div className="relative">
+            <textarea
+              id="message"
+              rows={6}
+              className="w-full px-4 py-4 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none outline-none peer placeholder-transparent"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <label
+              htmlFor="message"
+              className="absolute left-4 top-4 text-gray-500 text-sm transition-all duration-200 transform origin-left peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-blue-500 peer-valid:scale-75 peer-valid:-translate-y-6 peer-valid:text-blue-500 bg-gray-100 px-1"
+            >
               Your Message
             </label>
-            <textarea
-              rows={6}
-              placeholder="Type here..."
-              className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none outline-none"
-            ></textarea>
           </div>
+
           <button
             type="submit"
             className="w-full px-8 py-4 btn-gradient text-white rounded-lg font-semibold text-base transition-all transform hover:scale-105 shadow-lg"

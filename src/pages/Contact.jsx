@@ -108,10 +108,15 @@ const Contact = () => {
       {/* Hero Section - background image with dark overlay, centered content */}
       <section className="relative text-white py-16 md:py-20 overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/gallery/6c3e3dd551b6b26721b711c2b843dbdc9ec8da40.jpg)' }}
+          className="absolute inset-1 bg-cover bg-no-repeat"
+          style={{
+            backgroundImage:
+              'url(/gallery/6c3e3dd551b6b26721b711c2b843dbdc9ec8da40.jpg)',
+            backgroundPosition: 'center 25%', // ⬆️ thoda upar
+          }}
           aria-hidden
         />
+
         <div className="absolute inset-0 bg-black/60" aria-hidden />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[280px] md:min-h-[320px]">
           <motion.div
