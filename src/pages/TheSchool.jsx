@@ -119,25 +119,25 @@ const TheSchool = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
 
             {/* LEFT SIDE – Images */}
-            <div className="relative flex justify-center lg:justify-start">
+            <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
 
               <img
                 src="/Group 1707480967.png"
                 alt="Experience Advisor"
-                className="w-full h-full object-cover"
+                className="w-full max-w-full h-auto object-cover"
               />
 
             </div>
 
             {/* RIGHT SIDE – Content */}
-            <div className="lg:pl-10">
-              <div className="mb-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-600">
+            <div className="lg:pl-10 order-1 lg:order-2">
+              <div className="mb-3 sm:mb-4">
+                <span className="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-100 text-blue-600">
                   <svg width="59" height="45" viewBox="0 0 59 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.3945 1.44312C6.00655 1.17787 5.52911 1.0776 5.06723 1.16436C4.60534 1.25113 4.19684 1.51782 3.93159 1.90578C3.66634 2.29373 3.56607 2.77116 3.65284 3.23305C3.7396 3.69493 4.0063 4.10343 4.39425 4.36868L7.42613 6.43981C7.61816 6.57158 7.83434 6.6641 8.06224 6.71208C8.29014 6.76005 8.52528 6.76252 8.75414 6.71934C8.983 6.67617 9.20107 6.5882 9.39583 6.4605C9.59059 6.33279 9.7582 6.16786 9.88903 5.97518C10.0203 5.78325 10.1125 5.56732 10.1603 5.33974C10.2081 5.11216 10.2106 4.87738 10.1677 4.64884C10.1247 4.42029 10.0371 4.20245 9.90993 4.00777C9.78273 3.81309 9.61842 3.64539 9.42638 3.51424L6.3945 1.44312ZM7.16625 15.2342C7.16625 14.7643 6.97957 14.3136 6.64728 13.9813C6.31499 13.649 5.86431 13.4623 5.39437 13.4623H1.77187C1.30194 13.4623 0.851261 13.649 0.51897 13.9813C0.186679 14.3136 0 14.7643 0 15.2342C0 15.7041 0.186679 16.1548 0.51897 16.4871C0.851261 16.8194 1.30194 17.0061 1.77187 17.0061H5.39437C5.62706 17.0061 5.85747 16.9603 6.07244 16.8712C6.28742 16.7822 6.48275 16.6517 6.64728 16.4871C6.81181 16.3226 6.94233 16.1273 7.03137 15.9123C7.12042 15.6973 7.16625 15.4669 7.16625 15.2342ZM7.42809 24.0286L4.39622 26.0997C4.20399 26.2311 4.03952 26.399 3.91219 26.5939C3.78486 26.7888 3.69716 27.0069 3.65411 27.2357C3.61106 27.4645 3.61349 27.6995 3.66127 27.9273C3.70905 28.1552 3.80124 28.3714 3.93258 28.5636C4.06392 28.7559 4.23183 28.9203 4.42673 29.0477C4.62163 29.175 4.83971 29.2627 5.0685 29.3057C5.29729 29.3488 5.53233 29.3464 5.76018 29.2986C5.98803 29.2508 6.20424 29.1586 6.39647 29.0273L9.42834 26.9562C9.62057 26.8248 9.78504 26.6569 9.91237 26.462C10.0397 26.2671 10.1274 26.049 10.1705 25.8202C10.2135 25.5914 10.2111 25.3564 10.1633 25.1285C10.1155 24.9007 10.0233 24.6845 9.89198 24.4923C9.76065 24.3 9.59273 24.1356 9.39783 24.0082C9.20293 23.8809 8.98486 23.7932 8.75606 23.7502C8.52727 23.7071 8.29224 23.7095 8.06438 23.7573C7.83653 23.8051 7.62032 23.8973 7.42809 24.0286ZM50.2445 6.7489C50.6008 6.74904 50.9488 6.64128 51.2426 6.43981L54.2745 4.36868C54.4666 4.23734 54.6309 4.06946 54.7581 3.8746C54.8854 3.67975 54.9729 3.46175 55.0159 3.23305C55.0589 3.00435 55.0564 2.76942 55.0085 2.54169C54.9607 2.31395 54.8685 2.09787 54.7372 1.90578C54.6058 1.71368 54.4379 1.54933 54.2431 1.42212C54.0482 1.29491 53.8302 1.20732 53.6015 1.16436C53.3728 1.1214 53.1379 1.12391 52.9102 1.17174C52.6824 1.21956 52.4663 1.31178 52.2743 1.44312L49.2424 3.51424C48.9297 3.72796 48.6938 4.03623 48.5691 4.39385C48.4445 4.75147 48.4377 5.13961 48.5498 5.50137C48.6618 5.86312 48.8869 6.17945 49.1919 6.40397C49.4968 6.62848 49.8658 6.74937 50.2445 6.7489ZM56.8969 13.4604H53.2744C52.8044 13.4604 52.3538 13.647 52.0215 13.9793C51.6892 14.3116 51.5025 14.7623 51.5025 15.2322C51.5025 15.7022 51.6892 16.1529 52.0215 16.4851C52.3538 16.8174 52.8044 17.0041 53.2744 17.0041H56.8969C57.3668 17.0041 57.8175 16.8174 58.1498 16.4851C58.4821 16.1529 58.6687 15.7022 58.6687 15.2322C58.6687 14.7623 58.4821 14.3116 58.1498 13.9793C57.8175 13.647 57.3668 13.4604 56.8969 13.4604ZM51.2407 24.0286C51.0486 23.8973 50.8325 23.8051 50.6047 23.7572C50.377 23.7094 50.1421 23.7069 49.9134 23.7499C49.6847 23.7928 49.4667 23.8804 49.2718 24.0076C49.077 24.1348 48.9091 24.2992 48.7777 24.4913C48.6464 24.6834 48.5542 24.8995 48.5064 25.1272C48.4585 25.3549 48.456 25.5898 48.499 25.8185C48.542 26.0472 48.6295 26.2653 48.7568 26.4601C48.884 26.655 49.0483 26.8228 49.2404 26.9542L52.2723 29.0253C52.4643 29.1571 52.6805 29.2496 52.9084 29.2976C53.1363 29.3455 53.3714 29.348 53.6003 29.3048C53.8292 29.2617 54.0472 29.1737 54.242 29.046C54.4368 28.9183 54.6044 28.7534 54.7352 28.5607C54.8665 28.3686 54.9588 28.1525 55.0066 27.9248C55.0544 27.697 55.057 27.4621 55.014 27.2334C54.971 27.0047 54.8834 26.7867 54.7562 26.5918C54.629 26.397 54.4646 26.2291 54.2725 26.0978L51.2407 24.0286ZM29.3344 2.53489e-05C20.3273 -0.0137559 13.0036 7.30999 13.0036 16.3308C13.0036 20.5124 14.5825 24.3279 17.1852 27.2081C19.0752 29.3127 20.2525 31.9272 20.4494 34.717H38.2213C38.4182 31.9272 39.5935 29.3108 41.4855 27.2081C44.1831 24.2283 45.6739 20.3503 45.6671 16.3308C45.6652 7.30999 38.3414 -0.0157247 29.3344 2.53489e-05ZM26.9364 8.98737C25.9183 9.32207 24.9807 9.86444 24.183 10.5802C23.3853 11.2959 22.7448 12.1694 22.302 13.1454C22.1078 13.5735 21.7514 13.907 21.3113 14.0724C20.8712 14.2378 20.3834 14.2216 19.9552 14.0274C19.5271 13.8331 19.1936 13.4768 19.0282 13.0367C18.8628 12.5966 18.879 12.1088 19.0732 11.6806C19.7203 10.2577 20.6553 8.98437 21.8193 7.94103C22.9833 6.89768 24.3509 6.10698 25.8359 5.61884C26.2826 5.4729 26.769 5.51039 27.188 5.72305C27.6071 5.93572 27.9245 6.30614 28.0704 6.75284C28.2164 7.19953 28.1789 7.68591 27.9662 8.10496C27.7536 8.52402 27.3831 8.84143 26.9364 8.98737ZM20.4868 37.676V40.4303C20.4868 42.7081 22.3335 44.5528 24.6094 44.5528H34.0594C35.1527 44.5528 36.2013 44.1185 36.9745 43.3454C37.7476 42.5722 38.1819 41.5237 38.1819 40.4303V37.676H20.4868Z" fill="#3E3F95" />
                   </svg>
@@ -145,13 +145,11 @@ const TheSchool = () => {
                 </span>
               </div>
               <h2
+                className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4"
                 style={{
-                  width: "312px",
-                  height: "50px",
                   fontFamily: "Poppins, sans-serif",
                   fontWeight: 700,
-                  fontSize: "40px",
-                  lineHeight: "50px",
+                  lineHeight: "1.2",
                   letterSpacing: "0.2px",
                   color: "#252B42",
                 }}
@@ -160,13 +158,11 @@ const TheSchool = () => {
               </h2>
 
               <p
+                className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6"
                 style={{
-                  width: "509px",
-                  height: "162px",
                   fontFamily: "Poppins, sans-serif",
                   fontWeight: 400,
-                  fontSize: "18px",
-                  lineHeight: "28px",   // 👈 space between each line
+                  lineHeight: "28px",
                   letterSpacing: "0.2px",
                   color: "#737373",
                 }}
@@ -179,8 +175,8 @@ const TheSchool = () => {
 
               {/* Checklist */}
               <ul
-                className="space-y-4 font-poppins text-[18px] leading-[40px] text-[#9F9F9F]"
-                style={{ width: "401px", letterSpacing: "0.2px" }}
+                className="space-y-2 sm:space-y-3 md:space-y-4 font-poppins text-sm sm:text-base md:text-lg leading-relaxed sm:leading-[40px] text-[#9F9F9F]"
+                style={{ letterSpacing: "0.2px" }}
               >
                 {[
                   "Interactive workshops & hands-on projects",
@@ -222,17 +218,15 @@ const TheSchool = () => {
 
               <a
                 href="/about"
-                className="inline-flex items-center justify-center text-white font-semibold transition hover:opacity-90 mt-16"
+                className="inline-flex items-center justify-center text-white font-semibold transition hover:opacity-90 mt-8 sm:mt-12 md:mt-16 w-full sm:w-auto px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
                 style={{
-                  width: "160px",
-                  height: "48px",
                   borderRadius: "6px",
                   background: "linear-gradient(90deg, #00C3FF 0%, #333493 100%)",
                 }}
               >
                 Read More
                 <svg
-                  className="ml-2 w-4 h-4"
+                  className="ml-2 w-3 h-3 sm:w-4 sm:h-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -253,8 +247,8 @@ const TheSchool = () => {
       </section>
 
 
-      <section className="w-full h-[173px] bg-[#3E3F95] flex items-center justify-center px-4">
-        <p className="max-w-3xl text-center text-white text-[18px] leading-7 font-poppins">
+      <section className="w-full min-h-[120px] sm:h-[150px] md:h-[173px] bg-[#3E3F95] flex items-center justify-center px-4 sm:px-6 py-6 sm:py-8">
+        <p className="max-w-3xl text-center text-white text-sm sm:text-base md:text-[18px] leading-relaxed sm:leading-7 font-poppins">
           We draw inspiration from visionary educators, engaged parents, and the changing needs of the modern world.
           By combining traditional values with modern teaching methods, we aim to empower our students with knowledge,
           integrity, and a lifelong love for learning.
@@ -262,32 +256,33 @@ const TheSchool = () => {
       </section>
 
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="order-2 lg:order-1"
             >
-              <h2 className="mb-6 font-poppins font-bold text-[40px] leading-[50px] tracking-[0.2px] text-[#252B42]">
+              <h2 className="mb-4 sm:mb-6 font-poppins font-bold text-2xl sm:text-3xl md:text-4xl leading-tight sm:leading-[50px] tracking-[0.2px] text-[#252B42]">
                 Our Philosophy
               </h2>
-              <p className="text-[18px] text-[#737373] mb-4 leading-[28px] font-poppins">
-                Our philosophy is founded on the belief that education  <br /> should nurture the mind, character, and spirit of every  <br /> learner. We believe that true education goes beyond   <br /> academic excellence—it encourages curiosity,   <br /> integrity, creativity, and respect for others.
+              <p className="text-sm sm:text-base md:text-[18px] text-[#737373] mb-3 sm:mb-4 leading-relaxed sm:leading-[28px] font-poppins">
+                Our philosophy is founded on the belief that education should nurture the mind, character, and spirit of every learner. We believe that true education goes beyond academic excellence—it encourages curiosity, integrity, creativity, and respect for others.
               </p>
-              <p className="text-[18px] text-[#737373] mb-6 leading-[28px] font-poppins">
-                We are committed to creating a learning environment   <br />  where students are inspired to think independently, ask   <br /> meaningful questions, and develop a lifelong love for    <br />learning. By combining strong moral values with   <br /> modern teaching practices, we prepare students to   <br />face real-world challenges with confidence and    <br />responsibility.
+              <p className="text-sm sm:text-base md:text-[18px] text-[#737373] mb-4 sm:mb-6 leading-relaxed sm:leading-[28px] font-poppins">
+                We are committed to creating a learning environment where students are inspired to think independently, ask meaningful questions, and develop a lifelong love for learning. By combining strong moral values with modern teaching practices, we prepare students to face real-world challenges with confidence and responsibility.
               </p>
 
               <Link
                 to="/about"
-                className="inline-flex items-center mt-6 px-6 py-3 btn-gradient text-white rounded-lg font-semibold transition-all transform hover:scale-105"
+                className="inline-flex items-center mt-4 sm:mt-6 px-4 sm:px-6 py-2.5 sm:py-3 btn-gradient text-white rounded-lg font-semibold transition-all transform hover:scale-105 text-sm sm:text-base"
               >
                 Read More
                 <svg
-                  className="ml-2 w-5 h-5"
+                  className="ml-2 w-4 h-4 sm:w-5 sm:h-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -306,10 +301,10 @@ const TheSchool = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative h-[500px] md:h-[600px] flex items-center justify-center"
+              className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center order-1 lg:order-2"
             >
               {/* 1. The Main Tall Background Image (Left side) */}
-              <div className="absolute left-0 top-0 w-[70%] h-[90%] overflow-hidden rounded-[40px] z-10 shadow-xl">
+              <div className="absolute left-0 top-0 w-[70%] h-[90%] overflow-hidden rounded-2xl sm:rounded-3xl lg:rounded-[40px] z-10 shadow-xl">
                 <img
                   src="/Rectangle 34624680.png"
                   alt="Students in Library"
@@ -318,7 +313,7 @@ const TheSchool = () => {
               </div>
 
               {/* 2. The Overlapping Foreground Image (Bottom Right) */}
-              <div className="absolute right-0 bottom-4 w-[65%] h-[50%] overflow-hidden rounded-[30px] z-30 shadow-2xl border-4 border-white">
+              <div className="absolute right-0 bottom-2 sm:bottom-4 w-[65%] h-[50%] overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-[30px] z-30 shadow-2xl border-2 sm:border-4 border-white">
                 <img
                   src="/Rectangle 34624681.png"
                   alt="Students Studying"
@@ -327,13 +322,13 @@ const TheSchool = () => {
               </div>
 
               {/* 3. The "21+" Floating Badge (Top Right) */}
-              <div className="absolute top-10 right-4 w-32 h-32 md:w-40 md:h-40 bg-black rounded-full flex items-center justify-center z-20 shadow-lg border-[1px] border-blue-400">
+              <div className="absolute top-4 sm:top-6 md:top-10 right-2 sm:right-4 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-black rounded-full flex items-center justify-center z-20 shadow-lg border-[1px] border-blue-400">
                 <div className="text-white text-center">
-                  <span className="text-4xl md:text-6xl font-bold font-poppins">21+</span>
+                  <span className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold font-poppins">21+</span>
                 </div>
 
                 {/* Optional: The blue dashed lines/grid effect from your image */}
-                <div className="absolute -inset-4 border-2 border-dashed border-blue-400 opacity-30 rounded-lg -z-10"></div>
+                <div className="absolute -inset-2 sm:-inset-4 border-2 border-dashed border-blue-400 opacity-30 rounded-lg -z-10"></div>
               </div>
             </motion.div>
           </div>
@@ -341,25 +336,25 @@ const TheSchool = () => {
       </section>
 
 
-      <section className="w-full h-[173px] bg-[#3E3F95] flex items-center justify-center px-4">
-        <p className="max-w-4xl text-center text-white text-[18px] leading-7 font-poppins">
+      <section className="w-full min-h-[120px] sm:h-[150px] md:h-[173px] bg-[#3E3F95] flex items-center justify-center px-4 sm:px-6 py-6 sm:py-8">
+        <p className="max-w-4xl text-center text-white text-sm sm:text-base md:text-[18px] leading-relaxed sm:leading-7 font-poppins">
           Our approach emphasizes holistic development, ensuring that every child grows intellectually, emotionally, socially, and ethically. Through guidance, discipline, and encouragement, we strive to empower our students to become thoughtful individuals and responsible global citizens.
         </p>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
 
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative flex items-center justify-center min-h-[450px]"
+              className="relative flex items-center justify-center min-h-[300px] sm:min-h-[380px] md:min-h-[450px] order-2 lg:order-1"
             >
               {/* 1. Main Logo Container (White Card) */}
-              <div className="bg-white rounded-[40px] shadow-2xl p-12 w-[85%] h-[320px] flex flex-col items-center justify-center relative">
+              <div className="bg-white rounded-2xl sm:rounded-3xl lg:rounded-[40px] shadow-2xl p-6 sm:p-8 md:p-12 w-[85%] h-[220px] sm:h-[280px] md:h-[320px] flex flex-col items-center justify-center relative">
                 {/* Replace this with your actual Logo Image */}
                 <img
                   src="/LPS LOGO 1.png"
@@ -370,20 +365,20 @@ const TheSchool = () => {
 
               {/* 2. Overlapping LPS Meaning Card (Bottom Right) */}
               <div
-                className="absolute bottom-[-55px] right-20 w-[55%] md:w-[280px] p-8 rounded-[35px] shadow-2xl z-20"
+                className="absolute bottom-[-30px] sm:bottom-[-40px] md:bottom-[-55px] right-4 sm:right-10 md:right-20 w-[60%] sm:w-[55%] md:w-[280px] p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl lg:rounded-[35px] shadow-2xl z-20"
                 style={{ background: "#3E4095" }}
               >
-                <ul className="space-y-4">
-                  <li className="flex items-center text-white font-poppins font-bold text-xl md:text-2xl">
-                    <span className="w-3 h-3 bg-[#00C3FF] rounded-full mr-4"></span>
+                <ul className="space-y-2 sm:space-y-3 md:space-y-4">
+                  <li className="flex items-center text-white font-poppins font-bold text-base sm:text-lg md:text-xl lg:text-2xl">
+                    <span className="w-2 h-2 sm:w-3 sm:h-3 bg-[#00C3FF] rounded-full mr-2 sm:mr-4"></span>
                     L = Learn
                   </li>
-                  <li className="flex items-center text-white font-poppins font-bold text-xl md:text-2xl">
-                    <span className="w-3 h-3 bg-[#00C3FF] rounded-full mr-4"></span>
+                  <li className="flex items-center text-white font-poppins font-bold text-base sm:text-lg md:text-xl lg:text-2xl">
+                    <span className="w-2 h-2 sm:w-3 sm:h-3 bg-[#00C3FF] rounded-full mr-2 sm:mr-4"></span>
                     P = Progress
                   </li>
-                  <li className="flex items-center text-white font-poppins font-bold text-xl md:text-2xl">
-                    <span className="w-3 h-3 bg-[#00C3FF] rounded-full mr-4"></span>
+                  <li className="flex items-center text-white font-poppins font-bold text-base sm:text-lg md:text-xl lg:text-2xl">
+                    <span className="w-2 h-2 sm:w-3 sm:h-3 bg-[#00C3FF] rounded-full mr-2 sm:mr-4"></span>
                     S = Shine
                   </li>
                 </ul>
@@ -396,33 +391,32 @@ const TheSchool = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="order-1 lg:order-2"
             >
 
-              <h2 className="font-poppins font-bold text-[40px] leading-[50px] tracking-[0.2px] text-[#252B42]">
+              <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl leading-tight sm:leading-[50px] tracking-[0.2px] text-[#252B42] mb-4 sm:mb-6">
                 About Logo
               </h2>
 
-              <p className="text-[18px] text-[#737373] mb-4 leading-[28px] font-poppins">
+              <p className="text-sm sm:text-base md:text-[18px] text-[#737373] mb-3 sm:mb-4 leading-relaxed sm:leading-[28px] font-poppins">
                 Our school is a place where learning meets values, and education is shaped with purpose. We are committed to providing a safe, supportive, and inspiring environment that encourages students to achieve academic excellence while developing strong moral character.
               </p>
 
-              <p className="text-[18px] text-[#737373] mb-6 leading-[28px] font-poppins">
+              <p className="text-sm sm:text-base md:text-[18px] text-[#737373] mb-4 sm:mb-6 leading-relaxed sm:leading-[28px] font-poppins">
                 With a focus on holistic development, our school nurtures intellectual growth, creativity, discipline, and social responsibility. We believe that every child has unique potential, and our dedicated educators work closely with students to help them discover their strengths and build confidence.
               </p>
 
               <Link
                 to="/about"
-                className="inline-flex items-center justify-center text-white font-semibold transition hover:opacity-90"
+                className="inline-flex items-center justify-center text-white font-semibold transition hover:opacity-90 w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base"
                 style={{
-                  width: "199.28px",
-                  height: "58.95px",
                   borderRadius: "4.15px",
                   background: "linear-gradient(90deg, #00C3FF 0%, #333493 100%)",
                 }}
               >
                 Read More
                 <svg
-                  className="ml-2 w-4 h-4"
+                  className="ml-2 w-3 h-3 sm:w-4 sm:h-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -441,22 +435,22 @@ const TheSchool = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-10 md:mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               House system
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto" style={{
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4" style={{
               fontFamily: "Poppins, sans-serif",
               fontWeight: 400,
-              fontSize: "18px",
+              fontSize: "16px",
               lineHeight: "150%",
               letterSpacing: "0.2px"
             }}>
@@ -464,7 +458,7 @@ const TheSchool = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 justify-center">
             {[
               {
                 image: "/house/1.png",
@@ -490,40 +484,36 @@ const TheSchool = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="bg-white transition-all duration-300"
+                className="bg-white transition-all duration-300 w-full max-w-full"
                 style={{
-                  width: "542px",
                   borderRadius: "13px",
                   boxShadow: "0px 0px 24px 0px rgba(176, 176, 176, 0.3)"
                 }}
               >
-                <div className=" flex items-center justify-center overflow-hidden p-4 bg-cover" style={{ width: "542px", height: "296px", borderRadius: "13px 13px 0 0" }}>
-                  <img src={house.image} alt={house.title} className="w-full h-full rounded-2xl " />
+                <div className="flex items-center justify-center overflow-hidden p-2 sm:p-4 bg-cover h-[200px] sm:h-[250px] md:h-[296px]" style={{ width: "100%", borderRadius: "13px 13px 0 0" }}>
+                  <img src={house.image} alt={house.title} className="w-full h-full rounded-xl sm:rounded-2xl object-cover" />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
                     {house.title}
                   </h3>
-                  <p className="text-gray-600 mb-4" style={{
+                  <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4" style={{
                     fontFamily: "Poppins, sans-serif",
                     fontWeight: 400,
-                    fontSize: "18px",
                     lineHeight: "150%",
                     letterSpacing: "0.2px"
                   }}>
                     {house.description}
                   </p>
-                  <button className="inline-flex items-center justify-center text-white font-semibold transition hover:opacity-90"
+                  <button className="inline-flex items-center justify-center text-white font-semibold transition hover:opacity-90 w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base"
                     style={{
-                      width: "199.28px",
-                      height: "58.95px",
                       borderRadius: "4.15px",
                       background: "linear-gradient(90deg, #00C3FF 0%, #333493 100%)",
                     }}
                   >
                     Read More
                     <svg
-                      className="ml-2 w-4 h-4"
+                      className="ml-2 w-3 h-3 sm:w-4 sm:h-4"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -543,32 +533,30 @@ const TheSchool = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-10 md:mb-12"
           >
-            <h2 className="mb-4"
+            <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl md:text-4xl"
               style={{
                 fontFamily: "Poppins, sans-serif",
                 fontWeight: 700,
-                fontSize: "40px",
-                lineHeight: "50px",
+                lineHeight: "1.2",
                 letterSpacing: "0.2px",
                 color: "#252B42"
               }}>
               Authorized School Certificates
             </h2>
-            <p className="text-lg max-w-2xl mx-auto"
+            <p className="text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4"
               style={{
                 fontFamily: "Poppins, sans-serif",
                 fontWeight: 400,
-                fontSize: "18px",
-                lineHeight: "100%",
+                lineHeight: "140%",
                 letterSpacing: "0%",
                 color: "#9F9F9F"
               }}>
@@ -576,7 +564,7 @@ const TheSchool = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {certificates.map((certificate, index) => (
               <motion.div
                 key={index}
@@ -590,19 +578,13 @@ const TheSchool = () => {
                   boxShadow: "0px 0px 24px 0px rgba(176, 176, 176, 0.3)"
                 }}
               >
-                <img src={certificate.image} alt={certificate.title} className="object-cover" style={{
-                  width: "263.11px",
-                  height: "185.08px"
-                }} />
-                <div className="p-4 text-center">
-                  <h3 className="text-md font-semibold text-gray-800 mt-2"
+                <img src={certificate.image} alt={certificate.title} className="w-full h-auto object-cover" />
+                <div className="p-3 sm:p-4 text-center">
+                  <h3 className="text-sm sm:text-base font-semibold text-gray-800 mt-2"
                     style={{
-                      width: "210.18px",
-                      height: "23px",
                       fontFamily: "Poppins, sans-serif",
                       fontWeight: 600,
-                      fontSize: "15.55px",
-                      lineHeight: "100%",
+                      lineHeight: "140%",
                       letterSpacing: "0.13px",
                       color: "#3E3F95",
                       textAlign: "center",

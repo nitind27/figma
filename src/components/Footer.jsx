@@ -80,45 +80,32 @@ const Footer = () => {
       <div className="h-0.5 w-full bg-[#4696DD]" />
 
       {/* Main footer - light background */}
-      <div className="bg-[#F6F7FA] text-[#6C6D73]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:pl-[133px] lg:pr-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-6">
+      <div className="bg-gradient-to-b from-[#F6F7FA] to-white text-[#6C6D73]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-6 lg:gap-8">
             {/* 1. Logo & Fees Pay */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="flex flex-col"
+              className="flex flex-col sm:col-span-2 lg:col-span-1"
             >
-              <Link to="/" className="inline-block mb-1">
+              <Link to="/" className="inline-block mb-3 sm:mb-4">
                 <img
                   src="/5f72a812ff23fe954721b9cbdef08a5175ea805b.png"
                   alt="LPS Group of Education"
-                  className="object-contain flex-shrink-0 max-w-full h-auto w-28 sm:w-36 md:w-44 lg:w-[195.1px] block"
+                  className="object-contain flex-shrink-0 max-w-full h-auto w-32 sm:w-40 md:w-48 lg:w-[195.1px] block"
                 />
               </Link>
-              <h4
-                className="mt-0 mb-2 inline-block"
-                style={{
-                  fontFamily: 'Poppins, sans-serif',
-                  fontWeight: 500,
-                  fontSize: '16px',
-                  lineHeight: '100%',
-                  letterSpacing: '0%',
-                  color: '#3E4096',
-                  width: '71px',
-                  height: '24px',
-                }}
-              >
+              <h4 className="mt-0 mb-3 sm:mb-4 font-poppins font-medium text-base sm:text-lg text-[#3E4096]">
                 Fees Pay
               </h4>
               <Link
                 to="/fees"
-                className="inline-flex items-center justify-center w-[175px] h-[57px] font-semibold text-white text-sm transition-all hover:opacity-95 hover:shadow-lg shadow-[0_4px_14px_rgba(0,195,255,0.35)]"
-                style={{ background: 'linear-gradient(90deg, #00C3FF 0%, #333493 100%)', borderRadius: '4.04px' }}
+                className="group inline-flex items-center justify-center w-full sm:w-[175px] h-12 sm:h-[57px] font-semibold text-white text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg shadow-[#00C3FF]/30 rounded-lg bg-gradient-to-r from-[#00C3FF] to-[#333493] hover:from-[#00B3EF] hover:to-[#2A2A83]"
               >
-                Pay School Fees
+                <span className="relative z-10">Pay School Fees</span>
               </Link>
             </motion.div>
 
@@ -128,9 +115,10 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.05 }}
+              className="sm:col-span-1"
             >
-              <h4 className="font-bold text-base mb-3 text-[#434287]">About</h4>
-              <p className="text-sm leading-relaxed">
+              <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-[#434287]">About</h4>
+              <p className="text-sm sm:text-base leading-relaxed text-gray-600">
                 LPS School is truly an extraordinary place of learning. Our talented staff provides each student with a rigorous standards, high academic.
               </p>
             </motion.div>
@@ -141,15 +129,17 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
+              className="sm:col-span-1"
             >
-              <h4 className="font-bold text-base mb-3 text-[#434287]">Services</h4>
-              <ul className="space-y-0.4">
+              <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-[#434287]">Services</h4>
+              <ul className="space-y-2 sm:space-y-2.5">
                 {services.map((service, index) => (
                   <li key={index}>
                     <Link
                       to={service.path}
-                      className="text-sm hover:text-[#434287] transition-colors"
+                      className="text-sm sm:text-base text-gray-600 hover:text-[#434287] transition-colors duration-300 inline-flex items-center gap-2 group"
                     >
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#434287] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                       {service.label}
                     </Link>
                   </li>
@@ -163,34 +153,38 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
+              className="sm:col-span-2 lg:col-span-1"
             >
-              <h4 className="font-bold text-base mb-3 text-[#434287]">Contact Info</h4>
-              <ul className="space-y-2.5 text-sm">
-                <li className="flex items-start gap-2">
-                  <span className="text-black mt-0.5 flex-shrink-0">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-[#434287]">Contact Info</h4>
+              <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#434287] mt-1 flex-shrink-0">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                   </span>
-                  <span>
-                    <span className="font-medium text-[#434287]">Katagram School Address</span>
-                    <span className="block">Uday nagar - 1, gotala vadi. Near Pipalas char rasta , katargam road, surat-4 Gujrat</span>
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-black mt-0.5 flex-shrink-0">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                  </span>
-                  <span>
-                    <span className="font-medium text-[#434287]">Contact Us</span>
-                    <span className="block">+91-6357470004</span>
+                  <span className="flex-1">
+                    <span className="font-semibold text-[#434287] block mb-1">Katagram School Address</span>
+                    <span className="block text-gray-600 leading-relaxed">Uday nagar - 1, gotala vadi. Near Pipalas char rasta , katargam road, surat-4 Gujrat</span>
                   </span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-black mt-0.5 flex-shrink-0">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#434287] mt-1 flex-shrink-0">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                   </span>
-                  <a href="mailto:Info.k@lpsavani.in" className="font-medium text-[#434287] hover:underline">
-                    Info.k@lpsavani.in
-                  </a>
+                  <span className="flex-1">
+                    <span className="font-semibold text-[#434287] block mb-1">Contact Us</span>
+                    <a href="tel:+916357470004" className="block text-gray-600 hover:text-[#434287] transition-colors duration-300">+91-6357470004</a>
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#434287] mt-1 flex-shrink-0">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                  </span>
+                  <span className="flex-1">
+                    <span className="font-semibold text-[#434287] block mb-1">Email</span>
+                    <a href="mailto:Info.k@lpsavani.in" className="block text-gray-600 hover:text-[#434287] transition-colors duration-300 break-all">
+                      Info.k@lpsavani.in
+                    </a>
+                  </span>
                 </li>
               </ul>
             </motion.div>
@@ -201,39 +195,44 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
+              className="sm:col-span-2 lg:col-span-1"
             >
-              <h4 className="font-bold text-base mb-1 text-[#434287]">Social Connected</h4>
-              <div className="flex flex-nowrap gap-2 mb-6">
+              <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-[#434287]">Social Connected</h4>
+              <div className="flex flex-wrap gap-3 sm:gap-2 mb-6 sm:mb-8">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full text-white flex items-center justify-center hover:opacity-90 transition-opacity"
+                    className="group w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center hover:bg-[#3E3F95] hover:border-[#3E3F95] transition-all duration-300 hover:scale-110 shadow-sm hover:shadow-lg"
                     aria-label={social.name}
                   >
-                    {social.icon}
+                    <span className="text-[#3E3F95] group-hover:text-white transition-colors duration-300">
+                      {social.icon}
+                    </span>
                   </a>
                 ))}
               </div>
-              <h4 className="font-bold text-base mb-3 text-[#434287]">Download</h4>
-              <img
-                src="/5808cd2037118da14955030d29574b69aa3d1e78.png"
-                alt="LPS Group of Education"
-                className="object-contain max-w-full h-auto w-28 sm:w-36 md:w-44 lg:w-[165.1px]"
-              />
+              <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-[#434287]">Download</h4>
+              <div className="bg-white p-3 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 inline-block">
+                <img
+                  src="/5808cd2037118da14955030d29574b69aa3d1e78.png"
+                  alt="LPS Group of Education"
+                  className="object-contain max-w-full h-auto w-32 sm:w-40 md:w-44 lg:w-[165.1px]"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
       </div>
 
       {/* Bottom copyright bar - dark purplish blue */}
-      <div className="bg-[#3E3F95] text-white w-full h-[79px] flex items-center">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-sm">
-            <p>©2026 LPSgroupofeducation. All rights reserved.</p>
-            <p>LPS Group of Education</p>
+      <div className="bg-gradient-to-r from-[#3E3F95] to-[#2e2f75] text-white w-full min-h-[60px] sm:min-h-[70px] md:h-[79px] flex items-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 md:py-0">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-2 text-xs sm:text-sm text-center sm:text-left">
+            <p className="opacity-90">©2026 LPSgroupofeducation. All rights reserved.</p>
+            <p className="font-semibold">LPS Group of Education</p>
           </div>
         </div>
       </div>

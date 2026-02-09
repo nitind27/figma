@@ -337,25 +337,25 @@ const Academics = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative min-h-[500px] flex items-center justify-center"
+              className="relative min-h-[300px] sm:min-h-[400px] md:min-h-[500px] flex items-center justify-center"
             >
               {/* 1. Top Left Badge (85% Satisfied Students) */}
-              <div className="absolute top-0 left-[-55px] w-44 h-44= md:w-56 md:h-56 bg-[#3F4494] rounded-[30px] z-30 p-6 flex flex-col items-center justify-center text-center shadow-xl">
-                <div className="relative w-20 h-20 md:w-24 md:h-24 flex items-center justify-center mb-4">
+              <div className="absolute top-0 left-0 sm:left-[-20px] md:left-[-55px] w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-56 lg:h-56 bg-[#3F4494] rounded-[20px] sm:rounded-[25px] md:rounded-[30px] z-30 p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center text-center shadow-xl">
+                <div className="relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 flex items-center justify-center mb-2 sm:mb-3 md:mb-4">
                   {/* Progress Circle SVG */}
                   <svg className="w-full h-full transform -rotate-90">
                     <circle cx="50%" cy="50%" r="40%" stroke="rgba(255,255,255,0.2)" strokeWidth="8" fill="transparent" />
                     <circle cx="50%" cy="50%" r="40%" stroke="white" strokeWidth="8" fill="transparent" strokeDasharray="251" strokeDashoffset="37" strokeLinecap="round" />
                   </svg>
-                  <span className="absolute text-white font-bold text-xl">85%</span>
+                  <span className="absolute text-white font-bold text-xs sm:text-sm md:text-base lg:text-xl">85%</span>
                 </div>
-                <p className="text-white font-poppins font-medium text-lg leading-tight">
+                <p className="text-white font-poppins font-medium text-xs sm:text-sm md:text-base lg:text-lg leading-tight px-1">
                   85% Satisfied Students
                 </p>
               </div>
 
               {/* 2. Main Background Image (Top Right) */}
-              <div className="absolute top-10 right-0 w-[70%] h-[55%] overflow-hidden rounded-[40px] z-10 shadow-lg">
+              <div className="absolute top-4 sm:top-6 md:top-10 right-0 w-[70%] h-[45%] sm:h-[50%] md:h-[55%] overflow-hidden rounded-[20px] sm:rounded-[30px] md:rounded-[40px] z-10 shadow-lg">
                 <img
                   src="/secondarysection/Rectangle 34624720.png"
                   alt="Classroom"
@@ -364,7 +364,7 @@ const Academics = () => {
               </div>
 
               {/* 3. Foreground Image (Middle Left/Center) */}
-              <div className="absolute bottom-0 left-[-50px] w-[65%] h-[50%] overflow-hidden rounded-[40px] z-20 shadow-2xl border-8 border-white">
+              <div className="absolute bottom-0 left-0 sm:left-[-20px] md:left-[-50px] w-[65%] h-[45%] sm:h-[48%] md:h-[50%] overflow-hidden rounded-[20px] sm:rounded-[30px] md:rounded-[40px] z-20 shadow-2xl border-4 sm:border-6 md:border-8 border-white">
                 <img
                   src="/secondarysection/Rectangle 34624721.png"
                   alt="Teacher with students"
@@ -373,15 +373,15 @@ const Academics = () => {
               </div>
 
               {/* 4. Bottom Right Badge (Experience Advisor) */}
-              <div className="absolute bottom-[-10px] right-10 w-40 h-30 md:w-45 md:h-45 bg-black rounded-[30px] z-30 p-6 flex flex-col items-center justify-center text-center shadow-xl">
-                <div className="mb-4">
+              <div className="absolute bottom-[-5px] sm:bottom-[-8px] md:bottom-[-10px] right-2 sm:right-4 md:right-10 w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-45 lg:h-45 bg-black rounded-[20px] sm:rounded-[25px] md:rounded-[30px] z-30 p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center text-center shadow-xl">
+                <div className="mb-2 sm:mb-3 md:mb-4">
                   {/* Simple Icon Representation */}
-                  <svg width="55" height="61" viewBox="0 0 55 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-8 h-9 sm:w-10 sm:h-11 md:w-12 md:h-13 lg:w-[55px] lg:h-[61px]" viewBox="0 0 55 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M34.8291 30.0234C34.8291 25.7323 31.338 22.2414 27.047 22.2414C22.7559 22.2414 19.2648 25.7323 19.2648 30.0234C19.2648 34.3145 22.7559 37.8055 27.047 37.8055C31.338 37.8055 34.8291 34.3144 34.8291 30.0234ZM27.047 36.1375C23.6756 36.1375 20.9328 33.3948 20.9328 30.0234C20.9328 26.6521 23.6755 23.9094 27.047 23.9094C30.4184 23.9094 33.1611 26.6521 33.1611 30.0234C33.1611 33.3948 30.4184 36.1375 27.047 36.1375ZM31.9745 28.798C31.9054 28.5888 31.7782 28.4036 31.6079 28.2639C31.4376 28.1242 31.2311 28.0358 31.0124 28.009L29.0367 27.7569L28.1014 25.8701C27.9001 25.4643 27.4925 25.2118 27.0412 25.2192C26.8209 25.2202 26.6054 25.2839 26.4198 25.4027C26.2342 25.5215 26.0862 25.6906 25.993 25.8903L25.1427 27.6915L23.0594 27.9979C22.8413 28.0289 22.6364 28.1213 22.4687 28.2643C22.301 28.4073 22.1774 28.595 22.1124 28.8056C22.0454 29.0154 22.0394 29.24 22.0951 29.4531C22.1508 29.6662 22.2659 29.8592 22.427 30.0094L23.8772 31.3746L23.5248 33.4509C23.487 33.6679 23.5116 33.8913 23.5958 34.0949C23.6799 34.2985 23.8202 34.474 24.0003 34.6009C24.1792 34.7295 24.3909 34.8046 24.6107 34.8175C24.8306 34.8304 25.0497 34.7806 25.2423 34.6739L26.9888 33.7164L28.8546 34.6932C29.0225 34.7816 29.2094 34.828 29.3993 34.8283C29.6445 34.8283 29.8878 34.7501 30.0948 34.5967C30.2725 34.4663 30.4095 34.2881 30.4899 34.0829C30.5702 33.8777 30.5905 33.6539 30.5485 33.4375L30.1777 31.4805L31.6831 30.0081C31.8413 29.8547 31.9527 29.6595 32.0043 29.4453C32.0559 29.231 32.0456 29.0066 31.9745 28.798ZM28.821 30.4743C28.6829 30.6091 28.5803 30.776 28.5224 30.9601C28.4645 31.1442 28.4531 31.3398 28.4893 31.5294L28.7185 32.739L27.5269 32.1151C27.3592 32.0271 27.1728 31.9811 26.9835 31.981C26.7899 31.981 26.5963 32.0293 26.4205 32.1256L25.3409 32.7173L25.5659 31.3912C25.5985 31.2009 25.5834 31.0055 25.522 30.8224C25.4606 30.6394 25.3548 30.4744 25.2141 30.3423L24.3177 29.4984L25.6487 29.3026C25.8397 29.2748 26.0209 29.2001 26.1759 29.0851C26.331 28.9701 26.4551 28.8186 26.5373 28.6439L27.0628 27.5307L27.6603 28.7361C27.7459 28.9091 27.8729 29.0583 28.0301 29.1702C28.1874 29.2821 28.3699 29.3534 28.5614 29.3776L29.7825 29.5334L28.821 30.4743ZM27.047 15.5642C31.338 15.5642 34.8291 12.0731 34.8291 7.78203C34.8291 3.49106 31.338 0 27.047 0C22.7559 0 19.2648 3.49106 19.2648 7.78203C19.2648 12.0731 22.756 15.5642 27.047 15.5642ZM27.047 13.8962C25.3549 13.8962 23.8215 13.2051 22.7133 12.0905C23.6876 10.6683 25.2992 9.80396 27.0472 9.80396C28.795 9.80396 30.4065 10.6683 31.3808 12.0903C30.2727 13.205 28.7392 13.8962 27.047 13.8962ZM27.047 1.66797C30.4183 1.66797 33.1611 4.41071 33.1611 7.78203C33.1624 8.79958 32.9081 9.80116 32.4216 10.6949C31.773 9.89499 30.9538 9.25012 30.0239 8.8074C29.0941 8.36467 28.0771 8.13528 27.0472 8.13599C26.0173 8.13528 25.0002 8.36469 24.0703 8.80745C23.1404 9.25022 22.3212 9.89516 21.6725 10.6951C21.1859 9.80136 20.9315 8.79969 20.9328 7.78203C20.9328 4.41071 23.6756 1.66797 27.047 1.66797ZM44.2944 26.4197C44.9553 26.5975 45.6367 26.6877 46.3212 26.6882C47.6696 26.6882 49.0005 26.3345 50.1996 25.6423C51.9997 24.6029 53.2873 22.9248 53.8254 20.9169C54.3634 18.909 54.0872 16.8118 53.048 15.0117C50.9025 11.2956 46.1335 10.0176 42.4174 12.1633C40.6173 13.2027 39.3296 14.8808 38.7916 16.8887C38.2536 18.8965 38.5297 20.9937 39.569 22.7937C40.6084 24.594 42.2865 25.8816 44.2944 26.4197ZM49.3656 24.1977C48.4397 24.7338 47.3887 25.016 46.3188 25.0156C44.7103 25.0155 43.1346 24.3794 41.9742 23.2132C42.9484 21.7906 44.5603 20.9257 46.3087 20.9257C48.0576 20.9257 49.6702 21.7913 50.6443 23.2149C50.2631 23.5973 49.8332 23.9277 49.3656 24.1977ZM40.4027 17.3203C40.8255 15.7428 41.8372 14.4244 43.2515 13.6078C44.1774 13.0717 45.2284 12.7895 46.2983 12.7899C48.4129 12.7899 50.4725 13.8867 51.6036 15.8457C52.4202 17.26 52.6372 18.9077 52.2145 20.4852C52.0902 20.9485 51.9123 21.3958 51.6843 21.8179C51.0356 21.0176 50.2164 20.3724 49.2863 19.9295C48.3563 19.4866 47.339 19.2571 46.3089 19.2578C45.2792 19.257 44.2624 19.4863 43.3327 19.9289C42.403 20.3714 41.5839 21.0161 40.9352 21.8157C40.1848 20.4342 39.9942 18.8448 40.4027 17.3203ZM50.1996 34.4046C46.4832 32.2592 41.7145 33.537 39.569 37.253C38.5296 39.0532 38.2536 41.1503 38.7916 43.1582C39.3296 45.1661 40.6173 46.8442 42.4174 47.8836C43.5959 48.5659 44.9337 48.9251 46.2954 48.9246C48.9868 48.9246 51.6083 47.5287 53.048 45.0352C54.0874 43.2351 54.3634 41.1378 53.8254 39.13C53.2874 37.1221 51.9998 35.444 50.1996 34.4046ZM43.2514 46.4391C42.7839 46.1691 42.3541 45.8388 41.9729 45.4566C42.947 44.0327 44.5596 43.167 46.3087 43.167C48.0573 43.167 49.6695 44.0321 50.6436 45.4552C48.7356 47.3731 45.7024 47.854 43.2514 46.4391ZM51.6823 44.0569C51.0336 43.2573 50.2145 42.6127 49.2848 42.1702C48.3552 41.7277 47.3384 41.4984 46.3088 41.4991C45.2786 41.4983 44.2613 41.7279 43.3312 42.1709C42.4011 42.6138 41.5818 43.2591 40.9332 44.0594C40.705 43.6372 40.527 43.1898 40.4027 42.7263C39.98 41.1489 40.197 39.5012 41.0136 38.0869C42.1448 36.1276 44.204 35.031 46.3188 35.031C47.3553 35.031 48.4053 35.2945 49.3656 35.8489C50.7799 36.6655 51.7916 37.9839 52.2143 39.5615C52.6228 41.086 52.4323 42.6753 51.6823 44.0569ZM27.047 44.4827C22.7559 44.4827 19.2648 47.9738 19.2648 52.2647C19.2648 56.5558 22.7559 60.0469 27.047 60.0469C31.338 60.0469 34.829 56.5558 34.829 52.2647C34.8291 47.9736 31.338 44.4827 27.047 44.4827ZM27.047 58.3789C25.3549 58.3789 23.8215 57.6877 22.7133 56.5732C23.6877 55.1511 25.2992 54.2867 27.0472 54.2867C28.795 54.2867 30.4065 55.151 31.3808 56.573C30.2727 57.6877 28.7392 58.3789 27.047 58.3789ZM32.4216 55.1775C31.7729 54.3776 30.9538 53.7327 30.0239 53.29C29.0941 52.8473 28.0771 52.6179 27.0472 52.6186C26.0173 52.6178 25.0002 52.8473 24.0703 53.2901C23.1404 53.7328 22.3212 54.3778 21.6725 55.1778C21.1859 54.284 20.9315 53.2823 20.9328 52.2646C20.9328 48.8933 23.6755 46.1506 27.047 46.1506C30.4184 46.1506 33.161 48.8933 33.161 52.2646C33.1624 53.2822 32.9082 54.2838 32.4216 55.1775ZM9.79957 33.6272C7.79193 33.0893 5.6947 33.3653 3.89436 34.4046C0.178248 36.5501 -1.09953 41.319 1.04595 45.0352C2.48576 47.529 5.10686 48.9246 7.79848 48.9246C9.16021 48.925 10.4979 48.566 11.6764 47.8837C15.3925 45.7381 16.6704 40.9692 14.5248 37.2531C13.4857 35.4529 11.8074 34.1651 9.79957 33.6272ZM10.8424 46.439C8.39157 47.8543 5.3586 47.3732 3.45045 45.4556C4.42466 44.0322 6.03675 43.167 7.78562 43.167C9.53401 43.167 11.1461 44.032 12.1203 45.4548C11.7398 45.838 11.3101 46.169 10.8424 46.439ZM13.1587 44.0565C12.5101 43.2571 11.691 42.6126 10.7614 42.1702C9.83181 41.7277 8.81513 41.4985 7.78562 41.4992C6.75597 41.4985 5.73916 41.7278 4.80947 42.1703C3.87978 42.6129 3.06069 43.2575 2.41202 44.0571C0.839956 41.1593 1.85634 37.5073 4.72835 35.8492C6.14267 35.0327 7.7905 34.8158 9.3678 35.2385C10.9453 35.6611 12.2638 36.6728 13.0803 38.0871C14.1804 39.9923 14.1344 42.2494 13.1587 44.0565ZM11.6764 12.1633C7.96039 10.0178 3.19143 11.2957 1.04595 15.0117C0.00656697 16.8119 -0.269482 18.909 0.268557 20.9169C0.806596 22.9248 2.09427 24.6029 3.89436 25.6423C5.09351 26.3346 6.4242 26.6882 7.77275 26.6882C8.44863 26.6882 9.12928 26.5992 9.79957 26.4197C11.8074 25.8816 13.4855 24.594 14.5249 22.7937C16.6704 19.0776 15.3926 14.3088 11.6764 12.1633ZM9.36792 24.8085C7.79038 25.2312 6.14279 25.0143 4.72847 24.1978C4.26097 23.9278 3.83107 23.5974 3.44985 23.2151C4.42394 21.7913 6.03639 20.9257 7.7855 20.9257C9.5346 20.9257 11.1473 21.7914 12.1214 23.2153C11.369 23.9741 10.4273 24.5246 9.36792 24.8085ZM13.159 21.8155C12.5103 21.0159 11.6912 20.3713 10.7616 19.9288C9.83189 19.4862 8.81511 19.257 7.7855 19.2577C6.75533 19.2569 5.73803 19.4865 4.80798 19.9294C3.87792 20.3724 3.05862 21.0177 2.40999 21.818C2.18188 21.3959 2.00391 20.9486 1.8797 20.4852C1.45698 18.9076 1.67394 17.26 2.49041 15.8457C4.17613 12.9262 7.92287 11.922 10.8425 13.6078C13.7144 15.2658 14.7308 18.9177 13.159 21.8155ZM7.7855 13.6045C6.37964 13.6045 5.23589 14.7483 5.23589 16.1542C5.23589 17.56 6.37964 18.7038 7.7855 18.7038C9.19136 18.7038 10.3351 17.56 10.3351 16.1542C10.3351 14.7483 9.19136 13.6045 7.7855 13.6045ZM7.7855 17.0358C7.29928 17.0358 6.90386 16.6404 6.90386 16.1542C6.90386 15.6679 7.2994 15.2725 7.7855 15.2725C8.27159 15.2725 8.66714 15.6681 8.66714 16.1542C8.66714 16.6403 8.27171 17.0358 7.7855 17.0358ZM27.0472 7.58199C28.4531 7.58199 29.5968 6.43824 29.5968 5.03238C29.5968 3.62652 28.4531 2.48277 27.0472 2.48277C25.6413 2.48277 24.4976 3.62652 24.4976 5.03238C24.4976 6.43824 25.6413 7.58199 27.0472 7.58199ZM27.0472 4.15074C27.5334 4.15074 27.9288 4.54629 27.9288 5.03238C27.9288 5.51847 27.5333 5.91402 27.0472 5.91402C26.5611 5.91402 26.1656 5.51859 26.1656 5.03238C26.1656 4.54617 26.5611 4.15074 27.0472 4.15074ZM46.3088 18.7039C47.7146 18.7039 48.8584 17.5601 48.8584 16.1543C48.8584 14.7484 47.7146 13.6047 46.3088 13.6047C44.9029 13.6047 43.7592 14.7484 43.7592 16.1543C43.7592 17.5601 44.9029 18.7039 46.3088 18.7039ZM46.3088 15.2726C46.795 15.2726 47.1904 15.6682 47.1904 16.1543C47.1904 16.6404 46.795 17.0359 46.3088 17.0359C45.8226 17.0359 45.4271 16.6405 45.4271 16.1543C45.4271 15.6681 45.8226 15.2726 46.3088 15.2726ZM46.3088 35.846C44.9029 35.846 43.7592 36.9897 43.7592 38.3956C43.7592 39.8014 44.9029 40.9451 46.3088 40.9451C47.7146 40.9451 48.8584 39.8013 48.8584 38.3956C48.8584 36.9897 47.7145 35.846 46.3088 35.846ZM46.3088 39.2772C45.8226 39.2772 45.4271 38.8818 45.4271 38.3957C45.4271 37.9095 45.8226 37.514 46.3088 37.514C46.795 37.514 47.1904 37.9095 47.1904 38.3957C47.1904 38.8818 46.7949 39.2772 46.3088 39.2772ZM27.0472 46.9655C25.6413 46.9655 24.4976 48.1093 24.4976 49.5151C24.4976 50.9208 25.6413 52.0646 27.0472 52.0646C28.4531 52.0646 29.5968 50.9208 29.5968 49.5151C29.5968 48.1093 28.4531 46.9655 27.0472 46.9655ZM27.0472 50.3967C26.561 50.3967 26.1656 50.0013 26.1656 49.5152C26.1656 49.029 26.561 48.6336 27.0472 48.6336C27.5334 48.6336 27.9288 49.029 27.9288 49.5152C27.929 50.0013 27.5334 50.3967 27.0472 50.3967ZM7.78562 35.846C6.37976 35.846 5.23601 36.9897 5.23601 38.3956C5.23601 39.8014 6.37976 40.9451 7.78562 40.9451C9.19148 40.9451 10.3352 39.8013 10.3352 38.3956C10.3352 36.9897 9.19148 35.846 7.78562 35.846ZM7.78562 39.2772C7.2994 39.2772 6.90398 38.8818 6.90398 38.3957C6.90398 37.9095 7.2994 37.514 7.78562 37.514C8.27183 37.514 8.66726 37.9095 8.66726 38.3957C8.66726 38.8818 8.27183 39.2772 7.78562 39.2772ZM27.047 38.757C27.2681 38.757 27.4803 38.8449 27.6367 39.0013C27.7931 39.1577 27.8809 39.3698 27.8809 39.591V42.3188C27.8809 42.5399 27.7931 42.7521 27.6367 42.9085C27.4803 43.0649 27.2681 43.1527 27.047 43.1527C26.8258 43.1527 26.6136 43.0649 26.4572 42.9085C26.3008 42.7521 26.213 42.5399 26.213 42.3188V39.591C26.213 39.3698 26.3008 39.1577 26.4572 39.0013C26.6136 38.8449 26.8258 38.757 27.047 38.757ZM27.047 21.2897C26.8258 21.2897 26.6136 21.2018 26.4572 21.0454C26.3008 20.889 26.213 20.6769 26.213 20.4557V17.7281C26.213 17.5069 26.3008 17.2948 26.4572 17.1384C26.6136 16.982 26.8258 16.8941 27.047 16.8941C27.2681 16.8941 27.4803 16.982 27.6367 17.1384C27.7931 17.2948 27.8809 17.5069 27.8809 17.7281V20.4559C27.8809 20.677 27.793 20.8891 27.6366 21.0455C27.4802 21.2019 27.2681 21.2897 27.047 21.2897ZM34.9169 24.5168L37.2779 23.1536C37.3728 23.0979 37.4778 23.0616 37.5867 23.0467C37.6957 23.0318 37.8065 23.0386 37.9129 23.0667C38.0192 23.0948 38.1189 23.1437 38.2063 23.2105C38.2937 23.2773 38.367 23.3608 38.422 23.456C38.4769 23.5513 38.5126 23.6565 38.5267 23.7655C38.5409 23.8746 38.5334 23.9854 38.5046 24.0915C38.4757 24.1977 38.4262 24.2971 38.3588 24.384C38.2914 24.4709 38.2075 24.5437 38.1119 24.598L35.7509 25.9612C35.6561 26.0161 35.5514 26.0517 35.4428 26.066C35.3342 26.0803 35.2238 26.0731 35.118 26.0448C35.0122 26.0164 34.913 25.9675 34.8261 25.9008C34.7393 25.8341 34.6664 25.7509 34.6117 25.656C34.5011 25.4644 34.4711 25.2368 34.5284 25.0232C34.5856 24.8095 34.7254 24.6274 34.9169 24.5168ZM19.177 35.5301L16.8159 36.8932C16.7211 36.948 16.6163 36.9836 16.5078 36.998C16.3992 37.0123 16.2888 37.0051 16.183 36.9768C16.0772 36.9484 15.978 36.8995 15.8911 36.8328C15.8042 36.7661 15.7314 36.6829 15.6767 36.588C15.5661 36.3964 15.5361 36.1688 15.5933 35.9551C15.6506 35.7415 15.7904 35.5593 15.9819 35.4487L18.343 34.0857C18.5345 33.9768 18.7612 33.9481 18.9737 34.0058C19.1863 34.0635 19.3674 34.2029 19.4775 34.3937C19.5876 34.5844 19.6178 34.8109 19.5615 35.0238C19.5052 35.2367 19.367 35.4187 19.177 35.5301ZM15.6767 23.4588C15.7873 23.2672 15.9694 23.1275 16.1831 23.0702C16.3967 23.013 16.6243 23.043 16.8159 23.1536L19.177 24.5166C19.2726 24.571 19.3565 24.6437 19.4239 24.7307C19.4913 24.8176 19.5408 24.917 19.5697 25.0231C19.5985 25.1293 19.606 25.2401 19.5918 25.3491C19.5777 25.4582 19.542 25.5634 19.4871 25.6586C19.4321 25.7539 19.3588 25.8373 19.2714 25.9041C19.184 25.9709 19.0843 26.0198 18.978 26.0479C18.8716 26.076 18.7608 26.0828 18.6518 26.0679C18.5429 26.053 18.4379 26.0167 18.343 25.9611L15.9819 24.598C15.7904 24.4874 15.6506 24.3053 15.5933 24.0916C15.5361 23.878 15.5661 23.6503 15.6767 23.4588ZM38.4173 36.5881C38.3626 36.683 38.2897 36.7662 38.2028 36.8329C38.1159 36.8996 38.0167 36.9485 37.9109 36.9769C37.8051 37.0052 37.6948 37.0124 37.5862 36.9981C37.4776 36.9838 37.3729 36.9482 37.278 36.8933L34.9169 35.5301C34.8213 35.4758 34.7374 35.403 34.67 35.3161C34.6026 35.2292 34.5531 35.1298 34.5243 35.0236C34.4955 34.9175 34.4879 34.8067 34.5021 34.6976C34.5163 34.5886 34.5519 34.4834 34.6069 34.3881C34.6619 34.2929 34.7352 34.2094 34.8225 34.1426C34.9099 34.0758 35.0096 34.027 35.1159 33.9988C35.2223 33.9707 35.3331 33.9639 35.4421 33.9788C35.5511 33.9937 35.656 34.03 35.7509 34.0857L38.112 35.4489C38.3036 35.5595 38.4433 35.7416 38.5006 35.9553C38.5578 36.1689 38.5279 36.3965 38.4173 36.5881Z" fill="white" />
                   </svg>
 
                 </div>
-                <p className="text-white font-poppins font-medium text-lg leading-tight">
+                <p className="text-white font-poppins font-medium text-xs sm:text-sm md:text-base lg:text-lg leading-tight px-1">
                   Experience Advisor
                 </p>
 
@@ -409,7 +409,7 @@ const Academics = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center font-poppins font-bold text-[40px] leading-[50px] tracking-[0.2px] text-white mb-12"
+            className="text-center font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-tight md:leading-[50px] tracking-[0.2px] text-white mb-8 md:mb-12"
           >
             Primary Section
           </motion.h2>
@@ -420,7 +420,7 @@ const Academics = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 md:mb-12"
           >
             {[
               "/primarysection/1.png",
@@ -429,7 +429,7 @@ const Academics = () => {
             ].map((img, index) => (
               <div
                 key={index}
-                className="w-full h-[260px] rounded-[24px] overflow-hidden"
+                className="w-full h-[200px] sm:h-[230px] md:h-[260px] rounded-[16px] sm:rounded-[20px] md:rounded-[24px] overflow-hidden"
               >
                 <img
                   src={img}
@@ -561,7 +561,7 @@ const Academics = () => {
               </div>
 
               {/* 2. Bottom-Right Foreground Image (Overlapping) */}
-              <div className="absolute bottom-0 right-0 w-[70%] h-[65%] overflow-hidden rounded-[40px] z-20 shadow-2xl border-[12px] border-white">
+              <div className="absolute bottom-0 right-0 w-[70%] h-[55%] sm:h-[60%] md:h-[65%] overflow-hidden rounded-[20px] sm:rounded-[30px] md:rounded-[40px] z-20 shadow-2xl border-4 sm:border-6 md:border-[12px] border-white">
                 <img
                   src="/secondarysection/4.png"
                   alt="Interactive learning"
@@ -577,12 +577,12 @@ const Academics = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-poppins font-bold text-[40px] leading-[50px] tracking-[0.2px] text-[#252B42] mb-6">
+              <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-tight md:leading-[50px] tracking-[0.2px] text-[#252B42] mb-4 md:mb-6">
                 Highher Secondary Section
               </h2>
 
-              <p className="font-poppins font-normal text-[18px] text-[#9F9F9F] mb-4 leading-relaxed">
-                The Higher Secondary Section is designed to prepare students for<br /> higher education, competitive examinations, and career <br /> pathways. At this crucial stage, students are encouraged to <br /> develop academic depth, independent thinking, and a clear<br />sense of direction for their future. Our curriculum emphasizes<br />conceptual clarity, analytical skills, and practical application of <br /> knowledge. With experienced faculty, well-equipped laboratories, <br /> and structured academic support, students are guided to <br /> achieve excellence in their chosen streams.
+              <p className="font-poppins font-normal text-sm sm:text-base md:text-lg lg:text-[18px] text-[#9F9F9F] mb-4 leading-relaxed">
+                The Higher Secondary Section is designed to prepare students for higher education, competitive examinations, and career pathways. At this crucial stage, students are encouraged to develop academic depth, independent thinking, and a clear sense of direction for their future. Our curriculum emphasizes conceptual clarity, analytical skills, and practical application of knowledge. With experienced faculty, well-equipped laboratories, and structured academic support, students are guided to achieve excellence in their chosen streams.
               </p>
             </motion.div>
 
@@ -609,7 +609,7 @@ const Academics = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center font-poppins font-bold text-[40px] leading-[50px] tracking-[0.2px] text-white mb-12"
+            className="text-center font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-tight md:leading-[50px] tracking-[0.2px] text-white mb-8 md:mb-12 px-4"
           >
             Higher Secondary Section(Section)
           </motion.h2>
@@ -620,7 +620,7 @@ const Academics = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 md:mb-12"
           >
             {[
               "/hieger/1.png",
@@ -629,7 +629,7 @@ const Academics = () => {
             ].map((img, index) => (
               <div
                 key={index}
-                className="w-full h-[260px]  overflow-hidden"
+                className="w-full h-[200px] sm:h-[230px] md:h-[260px] overflow-hidden rounded-[16px] sm:rounded-[20px] md:rounded-[24px]"
               >
                 <img
                   src={img}
@@ -684,12 +684,7 @@ const Academics = () => {
           >
          
             <p
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                fontSize: "18px",
-                color: "#9F9F9F",
-                marginTop: "8px",
-              }}
+              className="font-poppins text-sm sm:text-base md:text-lg lg:text-[18px] text-[#9F9F9F] mt-2 px-4"
             >
               Certified for transparency and safety.
             </p>
@@ -702,22 +697,10 @@ const Academics = () => {
               className="rounded-lg overflow-hidden bg-white"
               style={{ border: "1px solid #E9E9E9" }}
             >
-              <div className="flex items-center justify-between px-6 py-4">
-                <div className="flex items-center gap-3">
-                  <div
-                    className="flex items-center justify-center"
-                    style={{
-                      width: "75px",
-                      height: "60px",
-                      backgroundColor: "#3E3F95",
-                      borderRadius: "10px",
-                      color: "#ffffff",
-                      fontWeight: 600,
-                      fontSize: "18px",
-                      flexShrink: 0,
-                    }}
-                  >
-                    <svg width="35" height="35" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div className="flex items-center justify-between px-4 sm:px-5 md:px-6 py-3 sm:py-3.5 md:py-4">
+                <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3">
+                  <div className="w-12 h-10 sm:w-14 sm:h-12 md:w-[60px] md:h-[50px] lg:w-[75px] lg:h-[60px] flex items-center justify-center bg-[#3E3F95] rounded-lg md:rounded-[10px] text-white font-semibold text-xs sm:text-sm md:text-base lg:text-[18px] flex-shrink-0">
+                    <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-[35px] lg:h-[35px]" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_700_341)">
                         <path d="M25.6252 49.4789C23.0211 49.4789 20.3127 49.0623 17.6044 48.1248C4.89608 43.7498 -1.87475 29.7914 2.50025 16.9789C6.87525 4.27059 20.8336 -2.50024 33.6461 1.87476C39.5836 3.95809 44.4794 8.12476 47.2919 13.6456C47.7086 14.3748 47.3961 15.3123 46.6669 15.6248C45.9377 16.0414 45.0002 15.7289 44.6877 14.9998C42.1877 10.1039 37.9169 6.45809 32.7086 4.68726C21.4586 0.833095 9.16692 6.77059 5.31275 18.0206C1.45858 29.2706 7.39608 41.4581 18.5419 45.3123C29.6877 49.1664 41.9794 43.2289 45.8336 32.0831C46.1461 31.2498 46.9794 30.9373 47.7086 31.1456C48.5419 31.4581 48.8544 32.2914 48.6461 33.0206C45.3127 43.1248 35.7294 49.4789 25.6252 49.4789Z" fill="white" />
                         <path d="M46.3535 16.2497L37.7077 16.1455C36.8744 16.1455 36.2494 15.4163 36.2494 14.583C36.2494 13.7497 36.9785 13.1247 37.8119 13.1247L44.9994 13.2288L45.1035 6.04134C45.1035 5.20801 45.7285 4.58301 46.666 4.58301C47.4994 4.58301 48.1244 5.31217 48.1244 6.14551L47.916 14.6872C47.916 15.1038 47.7077 15.4163 47.4994 15.7288C47.1869 16.0413 46.7702 16.2497 46.3535 16.2497ZM19.166 28.4372L18.2285 26.2497H14.0618L13.1243 28.4372H10.7285L15.1035 18.4372H17.291L21.666 28.4372H19.166ZM16.1452 21.458L14.8952 24.3747H17.3952L16.1452 21.458ZM28.1244 27.1872C27.3952 27.9163 26.5619 28.333 25.6244 28.333C24.5827 28.333 23.7494 28.0205 23.1244 27.2913C22.3952 26.5622 22.0827 25.7288 22.0827 24.583C22.0827 23.4372 22.3952 22.4997 23.1244 21.7705C23.8535 21.0413 24.6868 20.6247 25.5202 20.6247C26.4577 20.6247 27.1869 21.0413 27.8119 21.7705V20.7288H29.9993V27.3955C29.9993 28.1247 29.8952 28.6455 29.6869 29.2705C29.4785 29.7913 29.166 30.208 28.7493 30.5205C27.916 31.1455 26.9785 31.458 25.9368 31.458C25.3118 31.458 24.791 31.3538 24.166 31.1455C23.541 30.9372 23.0202 30.7288 22.6035 30.3122L23.4368 28.6455C24.166 29.1663 24.8952 29.4788 25.7285 29.4788C26.5619 29.4788 27.1869 29.2705 27.6035 28.8538C27.916 28.6455 28.1244 28.0205 28.1244 27.1872ZM27.8119 24.4788C27.8119 23.8538 27.6035 23.333 27.291 23.0205C26.9785 22.708 26.5618 22.4997 26.041 22.4997C25.5202 22.4997 25.1035 22.708 24.6869 23.0205C24.2702 23.333 24.166 23.8538 24.166 24.4788C24.166 25.1038 24.3744 25.6247 24.6869 25.9372C24.9994 26.3538 25.5202 26.458 26.041 26.458C26.5618 26.458 26.9785 26.2497 27.291 25.9372C27.7077 25.6247 27.8119 25.1038 27.8119 24.4788ZM38.6452 27.3955C37.8118 28.2288 36.7702 28.6455 35.6244 28.6455C34.4785 28.6455 33.4368 28.333 32.7077 27.6038C31.9785 26.8747 31.5619 25.9372 31.5619 24.6872C31.5619 23.4372 31.9785 22.4997 32.7077 21.7705C33.4368 21.0413 34.3744 20.7288 35.416 20.7288C36.4577 20.7288 37.3952 21.0413 38.1243 21.6663C38.8535 22.2913 39.2702 23.2288 39.2702 24.2705V25.4163H33.6452C33.7494 25.833 33.9577 26.1455 34.2702 26.458C34.6869 26.7705 35.1035 26.8747 35.5202 26.8747C36.2493 26.8747 36.8744 26.6663 37.3952 26.1455L38.6452 27.3955ZM36.666 22.8122C36.3535 22.6038 36.041 22.3955 35.6244 22.3955C35.2077 22.3955 34.791 22.4997 34.4785 22.8122C34.166 23.0205 33.9577 23.4372 33.8535 23.8538H37.1869C37.0827 23.4372 36.8744 23.0205 36.666 22.8122Z" fill="white" />
@@ -732,57 +715,46 @@ const Academics = () => {
 
                   </div>
 
-                  <h3
-                    style={{
-                      fontFamily: "Poppins, sans-serif",
-                      fontWeight: 600,
-                      fontSize: "20px",
-                      lineHeight: "100%",
-                      letterSpacing: "0.13px",
-                      color: "#3E3F95",
-                      width: "123px",
-                      height: "30px",
-                    }}
-                  >
+                  <h3 className="font-poppins font-semibold text-base sm:text-lg md:text-xl lg:text-[20px] leading-tight tracking-[0.13px] text-[#3E3F95]">
                     Age Criteria
                   </h3>
                 </div>
-                <span className="text-xl text-gray-400">−</span>
+                <span className="text-lg sm:text-xl text-gray-400">−</span>
               </div>
 
             <div className="overflow-x-auto border border-[#E9E9E9]"> {/* Outer container border */}
-  <table className="w-full text-sm border-collapse">
+  <table className="w-full text-xs sm:text-sm md:text-sm border-collapse">
     <thead className="bg-[#F9F9F9] text-[#9F9F9F]">
-      <tr className="h-[77px]">
+      <tr className="h-[60px] sm:h-[70px] md:h-[77px]">
         {/* Borders are added to each cell (th/td) individually to match the grid style */}
-        <th className="px-6 py-3 text-left font-poppins font-medium border-r border-[#E9E9E9]">SLNO</th>
-        <th className="px-6 py-3 text-left font-poppins font-medium border-r border-[#E9E9E9]">INFORMATION</th>
-        <th className="px-6 py-3 text-left font-poppins font-medium">DETAILS</th>
+        <th className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-left font-poppins font-medium border-r border-[#E9E9E9] text-xs sm:text-sm">SLNO</th>
+        <th className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-left font-poppins font-medium border-r border-[#E9E9E9] text-xs sm:text-sm">INFORMATION</th>
+        <th className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-left font-poppins font-medium text-xs sm:text-sm">DETAILS</th>
       </tr>
     </thead>
     <tbody className="text-gray-600">
       {/* Row 1 */}
-      <tr className="h-[77px] bg-white border-t border-[#E9E9E9]">
-        <td className="px-6 font-poppins font-normal text-[16px] text-[#252B42] align-middle w-[100px] border-r border-[#E9E9E9]">
+      <tr className="h-[60px] sm:h-[70px] md:h-[77px] bg-white border-t border-[#E9E9E9]">
+        <td className="px-3 sm:px-4 md:px-6 font-poppins font-normal text-xs sm:text-sm md:text-base lg:text-[16px] text-[#252B42] align-middle w-[60px] sm:w-[80px] md:w-[100px] border-r border-[#E9E9E9]">
           1
         </td>
-        <td className="px-6 font-poppins font-normal text-[16px] text-[#9F9F9F] align-middle border-r border-[#E9E9E9]">
+        <td className="px-3 sm:px-4 md:px-6 font-poppins font-normal text-xs sm:text-sm md:text-base lg:text-[16px] text-[#9F9F9F] align-middle border-r border-[#E9E9E9]">
           NAME OF THE SCHOOL
         </td>
-        <td className="px-6 font-poppins font-normal text-[16px] text-[#9F9F9F] align-middle">
+        <td className="px-3 sm:px-4 md:px-6 font-poppins font-normal text-xs sm:text-sm md:text-base lg:text-[16px] text-[#9F9F9F] align-middle">
           BLUE HORIZON PUBLIC SCHOOL
         </td>
       </tr>
 
       {/* Row 2 */}
-      <tr className="h-[77px] bg-[#F9F9F9] border-t border-[#E9E9E9]">
-        <td className="px-6 font-poppins font-normal text-[16px] text-[#252B42] align-middle w-[100px] border-r border-[#E9E9E9]">
+      <tr className="h-[60px] sm:h-[70px] md:h-[77px] bg-[#F9F9F9] border-t border-[#E9E9E9]">
+        <td className="px-3 sm:px-4 md:px-6 font-poppins font-normal text-xs sm:text-sm md:text-base lg:text-[16px] text-[#252B42] align-middle w-[60px] sm:w-[80px] md:w-[100px] border-r border-[#E9E9E9]">
           2
         </td>
-        <td className="px-6 font-poppins font-normal text-[16px] text-[#9F9F9F] align-middle border-r border-[#E9E9E9]">
+        <td className="px-3 sm:px-4 md:px-6 font-poppins font-normal text-xs sm:text-sm md:text-base lg:text-[16px] text-[#9F9F9F] align-middle border-r border-[#E9E9E9]">
           AFFILIATION NO (IF AVAILABLE)
         </td>
-        <td className="px-6 font-poppins font-normal text-[16px] text-[#9F9F9F] align-middle">
+        <td className="px-3 sm:px-4 md:px-6 font-poppins font-normal text-xs sm:text-sm md:text-base lg:text-[16px] text-[#9F9F9F] align-middle">
           CBSE/AFF/2630042/EX-03122-2021/2024
         </td>
       </tr>
@@ -796,38 +768,16 @@ const Academics = () => {
               className="rounded-lg overflow-hidden bg-white"
               style={{ border: "1px solid #E9E9E9" }}
             >
-              <div className="flex items-center justify-between px-6 py-4">
-                <div className="flex items-center gap-3">
-                  <div
-                    className="flex items-center justify-center"
-                    style={{
-                      width: "75px",
-                      height: "60px",
-                      backgroundColor: "#3E3F95",
-                      borderRadius: "10px",
-                      color: "#ffffff",
-                      fontWeight: 600,
-                      fontSize: "18px",
-                      flexShrink: 0,
-                    }}
-                  >
-                    <svg width="35" height="35" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div className="flex items-center justify-between px-4 sm:px-5 md:px-6 py-3 sm:py-3.5 md:py-4">
+                <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3">
+                  <div className="w-12 h-10 sm:w-14 sm:h-12 md:w-[60px] md:h-[50px] lg:w-[75px] lg:h-[60px] flex items-center justify-center bg-[#3E3F95] rounded-lg md:rounded-[10px] text-white font-semibold text-xs sm:text-sm md:text-base lg:text-[18px] flex-shrink-0">
+                    <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-[35px] lg:h-[35px]" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M27.4253 45.0995C28.5739 46.1717 29.8519 47.0962 31.2297 47.8516H2.73555C1.22881 47.8516 0 46.6227 0 45.116V7.40615C0 5.89951 1.22881 4.67061 2.73555 4.67061H8.45977V7.42256H2.75195V45.0995H27.4253ZM33.4506 21.768C34.368 21.7188 35.2877 21.7362 36.2026 21.82V7.40615C36.2026 5.89951 34.9738 4.67061 33.4671 4.67061H27.7429V7.42266H33.4507V21.768H33.4506ZM18.1013 8.13359H9.82695V4.67061C9.82695 4.18389 10.0221 3.76484 10.3948 3.45166C10.7675 3.13848 11.2139 3.01836 11.6934 3.10225L14.8835 3.65986V3.21787C14.8835 1.44072 16.3242 0 18.1014 0C19.8785 0 21.3192 1.44072 21.3192 3.21787V3.65986L24.5094 3.10225C24.9889 3.01846 25.4353 3.13857 25.8079 3.45166C26.1806 3.76475 26.3758 4.18379 26.3758 4.67061V8.13359H18.1013ZM18.1013 4.08145C18.6499 4.08145 19.0974 3.63398 19.0974 3.08535C19.0974 2.53672 18.6499 2.08926 18.1013 2.08926C17.5526 2.08926 17.1052 2.53672 17.1052 3.08535C17.1052 3.63398 17.5526 4.08145 18.1013 4.08145ZM17.0027 39.3887H23.2468C23.0339 38.9408 22.8386 38.4847 22.6614 38.0215H17.0026C16.8213 38.0215 16.6475 38.0935 16.5193 38.2217C16.3911 38.3499 16.319 38.5238 16.319 38.7051C16.319 38.8864 16.3911 39.0603 16.5193 39.1884C16.6475 39.3167 16.8214 39.3887 17.0027 39.3887ZM17.0027 35.375H21.8674C21.7671 34.9225 21.6835 34.4665 21.6167 34.0078H17.0026C16.8213 34.0078 16.6475 34.0798 16.5193 34.208C16.3911 34.3362 16.319 34.5101 16.319 34.6914C16.319 34.8727 16.3911 35.0466 16.5193 35.1748C16.6475 35.303 16.8214 35.375 17.0027 35.375ZM26.3479 23.5706H17.0027C16.8214 23.5706 16.6476 23.6426 16.5194 23.7708C16.3912 23.899 16.3191 24.0729 16.3191 24.2542C16.3191 24.4355 16.3912 24.6094 16.5194 24.7376C16.6476 24.8658 16.8214 24.9378 17.0027 24.9378H23.9485C24.7139 24.424 25.5158 23.9671 26.3479 23.5706H26.3479ZM29.742 17.8306C29.742 17.6493 29.67 17.4754 29.5418 17.3472C29.4136 17.219 29.2397 17.147 29.0584 17.147H17.0027C16.8214 17.147 16.6476 17.219 16.5194 17.3472C16.3912 17.4754 16.3191 17.6493 16.3191 17.8306C16.3191 18.0119 16.3912 18.1857 16.5194 18.3139C16.6476 18.4421 16.8214 18.5142 17.0027 18.5142H29.0584C29.2397 18.5142 29.4136 18.4421 29.5418 18.3139C29.67 18.1857 29.742 18.0119 29.742 17.8306ZM17.0027 28.9514H21.562C21.6016 28.6301 21.6494 28.3097 21.7056 27.9908L21.7771 27.5843H17.0028C16.8215 27.5843 16.6477 27.6563 16.5195 27.7845C16.3913 27.9127 16.3192 28.0866 16.3192 28.2679C16.3192 28.4492 16.3913 28.623 16.5195 28.7512C16.6477 28.8794 16.8215 28.9515 17.0028 28.9515L17.0027 28.9514ZM29.0584 13.1333H17.0027C16.8214 13.1333 16.6476 13.2053 16.5194 13.3335C16.3912 13.4617 16.3191 13.6356 16.3191 13.8169C16.3191 13.9982 16.3912 14.1721 16.5194 14.3003C16.6476 14.4285 16.8214 14.5005 17.0027 14.5005H29.0584C29.2397 14.5005 29.4136 14.4285 29.5418 14.3003C29.67 14.1721 29.742 13.9982 29.742 13.8169C29.742 13.6356 29.67 13.4617 29.5418 13.3335C29.4136 13.2053 29.2397 13.1333 29.0584 13.1333ZM14.1462 18.8268C14.1462 19.2295 13.8167 19.559 13.4139 19.559H7.40791C7.00508 19.559 6.67559 19.2295 6.67559 18.8268V12.8207C6.67559 12.4179 7.00508 12.0884 7.40791 12.0884H13.4139C13.8167 12.0884 14.1462 12.4179 14.1462 12.8207V18.8268ZM12.5989 14.0665C12.4707 13.9383 12.2969 13.8664 12.1156 13.8664C11.9344 13.8664 11.7605 13.9383 11.6323 14.0665L9.71221 15.9866L9.29639 15.2664C9.20593 15.1109 9.05758 14.9975 8.88377 14.9511C8.70997 14.9046 8.52484 14.9289 8.36885 15.0185C8.21287 15.1081 8.09872 15.2559 8.05136 15.4295C8.004 15.603 8.02728 15.7883 8.11611 15.9447L8.97764 17.4369C9.2002 17.8242 9.73447 17.8975 10.0511 17.5811L12.5989 15.0331C12.7271 14.9049 12.7991 14.7311 12.7991 14.5498C12.7991 14.3685 12.7271 14.1947 12.5989 14.0665ZM14.1462 29.2641C14.1462 29.6668 13.8167 29.9963 13.4139 29.9963H7.40791C7.00508 29.9963 6.67559 29.6668 6.67559 29.2641V23.258C6.67559 22.8552 7.00508 22.5257 7.40791 22.5257H13.4139C13.8167 22.5257 14.1462 22.8552 14.1462 23.258V29.2641ZM12.5989 24.5038C12.4707 24.3757 12.2969 24.3037 12.1156 24.3037C11.9344 24.3037 11.7605 24.3757 11.6323 24.5038L9.71221 26.4239L9.29639 25.7037C9.20593 25.5482 9.05758 25.4348 8.88377 25.3884C8.70997 25.3419 8.52484 25.3662 8.36885 25.4558C8.21287 25.5455 8.09872 25.6932 8.05136 25.8668C8.004 26.0403 8.02728 26.2256 8.11611 26.382L8.97764 27.8742C9.2002 28.2615 9.73447 28.3348 10.0511 28.0184L12.5989 25.4704C12.7271 25.3422 12.7991 25.1684 12.7991 24.9871C12.7991 24.8058 12.7271 24.632 12.5989 24.5038ZM14.1462 33.6953V39.7014C14.1462 40.1041 13.8167 40.4336 13.4139 40.4336H7.40791C7.00508 40.4336 6.67559 40.1041 6.67559 39.7014V33.6953C6.67559 33.2925 7.00508 32.963 7.40791 32.963H13.4139C13.8167 32.963 14.1462 33.2925 14.1462 33.6953ZM12.5989 34.941C12.4707 34.8129 12.2969 34.7409 12.1156 34.7409C11.9344 34.7409 11.7605 34.8129 11.6323 34.941L9.71221 36.8611L9.29639 36.1409C9.20593 35.9854 9.05758 35.872 8.88377 35.8256C8.70997 35.7791 8.52484 35.8034 8.36885 35.893C8.21287 35.9827 8.09872 36.1304 8.05136 36.304C8.004 36.4775 8.02728 36.6628 8.11611 36.8192L8.97764 38.3114C9.2002 38.6987 9.73447 38.772 10.0511 38.4556L12.5989 35.9076C12.7271 35.7794 12.7991 35.6056 12.7991 35.4243C12.7991 35.243 12.7271 35.0692 12.5989 34.941ZM42.5184 29.1006C42.6315 29.8222 42.6881 30.5515 42.6878 31.2818C42.6878 36.7995 39.4682 41.7899 34.4692 44.077C29.4656 41.7898 26.2507 36.7994 26.2507 31.2818C26.2507 30.5504 26.3072 29.818 26.4154 29.1006C28.7831 27.4441 31.5603 26.57 34.4692 26.57C37.3782 26.57 40.1507 27.4441 42.5184 29.1006ZM39.1381 30.69C38.6104 30.2678 37.8401 30.3534 37.418 30.8812L33.5979 35.6562L32.3605 33.974C31.9628 33.4311 31.2001 33.3134 30.6572 33.7111C30.1143 34.1089 29.9966 34.8715 30.3943 35.4145L32.5775 38.3821C33.0504 39.0274 34.0152 39.0519 34.5163 38.4265L39.3293 32.4102C39.7515 31.8824 39.6659 31.1122 39.1382 30.69H39.1381ZM46.1475 31.2815C46.1475 38.2868 41.981 44.6045 35.5691 47.3753L34.4669 47.8517L33.3646 47.3753C26.9528 44.6045 22.7863 38.2868 22.7863 31.2815C22.7863 30.2581 22.8746 29.2357 23.052 28.2277L23.2461 27.124L24.1517 26.4639C27.1553 24.274 30.7501 23.1078 34.467 23.1078C38.1839 23.1078 41.7786 24.274 44.7822 26.4639L45.6877 27.124L45.8818 28.2277C46.0588 29.236 46.1476 30.2578 46.1474 31.2815H46.1475ZM44.0528 31.2818C44.0528 30.3785 43.9729 29.4734 43.8175 28.5903C43.7893 28.4167 43.6903 28.2613 43.5491 28.1568C40.8991 26.2241 37.7595 25.2026 34.4692 25.2026C31.179 25.2026 28.0394 26.224 25.3846 28.1568C25.2434 28.2613 25.1445 28.4167 25.1163 28.5903C24.96 29.479 24.8813 30.3795 24.881 31.2818C24.881 37.4448 28.5383 43.0076 34.1962 45.452C34.281 45.4901 34.3751 45.5085 34.4692 45.5085C34.5587 45.5085 34.6528 45.4901 34.7375 45.452C40.3954 43.0076 44.0528 37.4448 44.0528 31.2818Z" fill="white"/>
 </svg>
 
                   </div>
 
-                  <h3
-                    style={{
-                      fontFamily: "Poppins, sans-serif",
-                      fontWeight: 600,
-                      fontSize: "20px",
-                      lineHeight: "100%",
-                      letterSpacing: "0.13px",
-                      color: "#3E3F95",
-                      height: "30px",
-                    }}
-                  >
+                  <h3 className="font-poppins font-semibold text-base sm:text-lg md:text-xl lg:text-[20px] leading-tight tracking-[0.13px] text-[#3E3F95]">
                     Required Documents
                   </h3>
                 </div>
@@ -835,29 +785,29 @@ const Academics = () => {
               </div>
 
        <div className="overflow-x-auto border border-[#E9E9E9]"> {/* Table ka outer border */}
-  <table className="w-full text-sm border-collapse">
+  <table className="w-full text-xs sm:text-sm md:text-sm border-collapse">
     <thead className="bg-[#F9F9F9] text-[#9F9F9F]">
-      <tr className="h-[77px]">
+      <tr className="h-[60px] sm:h-[70px] md:h-[77px]">
         {/* th mein border-r (right) vertical line ke liye */}
-        <th className="px-6 py-3 text-left font-poppins font-medium border-r border-[#E9E9E9]">SLNO</th>
-        <th className="px-6 py-3 text-left font-poppins font-medium border-r border-[#E9E9E9]">INFORMATION</th>
-        <th className="px-6 py-3 text-left font-poppins font-medium">DETAILS</th>
+        <th className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-left font-poppins font-medium border-r border-[#E9E9E9] text-xs sm:text-sm">SLNO</th>
+        <th className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-left font-poppins font-medium border-r border-[#E9E9E9] text-xs sm:text-sm">INFORMATION</th>
+        <th className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 text-left font-poppins font-medium text-xs sm:text-sm">DETAILS</th>
       </tr>
     </thead>
     <tbody className="text-gray-600">
       {/* Row 1 */}
-      <tr className="h-[77px] bg-white border-t border-[#E9E9E9]">
-        <td className="px-6 font-poppins font-normal text-[16px] text-[#252B42] align-middle w-[100px] border-r border-[#E9E9E9]">
+      <tr className="h-[60px] sm:h-[70px] md:h-[77px] bg-white border-t border-[#E9E9E9]">
+        <td className="px-3 sm:px-4 md:px-6 font-poppins font-normal text-xs sm:text-sm md:text-base lg:text-[16px] text-[#252B42] align-middle w-[60px] sm:w-[80px] md:w-[100px] border-r border-[#E9E9E9]">
           1
         </td>
-        <td className="px-6 font-poppins font-normal text-[16px] text-[#9F9F9F] align-middle border-r border-[#E9E9E9]">
-          COPY OF AFFILIATION/UP GRADATION LETTER <br /> AND RECENT EXTENSION OF AFFILIATION (IF ANY)
+        <td className="px-3 sm:px-4 md:px-6 font-poppins font-normal text-xs sm:text-sm md:text-base lg:text-[16px] text-[#9F9F9F] align-middle border-r border-[#E9E9E9]">
+          COPY OF AFFILIATION/UP GRADATION LETTER AND RECENT EXTENSION OF AFFILIATION (IF ANY)
         </td>
-        <td className="px-6 align-middle">
+        <td className="px-3 sm:px-4 md:px-6 align-middle">
           {/* PDF Icon exactly as per image */}
           <a href="#" className="inline-block transition-transform hover:scale-110">
             <div className="flex flex-col items-center">
-              <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-[45px] lg:h-[45px]" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 5H25L35 15V40H10V5Z" fill="#E2E2E2" stroke="#CCCCCC" />
                 <path d="M25 5V15H35" fill="#CCCCCC" />
                 <rect x="12" y="28" width="21" height="10" rx="2" fill="#C43E3E" />
@@ -870,17 +820,17 @@ const Academics = () => {
       </tr>
 
       {/* Row 2 */}
-      <tr className="h-[77px] bg-[#F9F9F9] border-t border-[#E9E9E9]">
-        <td className="px-6 font-poppins font-normal text-[16px] text-[#252B42] align-middle w-[100px] border-r border-[#E9E9E9]">
+      <tr className="h-[60px] sm:h-[70px] md:h-[77px] bg-[#F9F9F9] border-t border-[#E9E9E9]">
+        <td className="px-3 sm:px-4 md:px-6 font-poppins font-normal text-xs sm:text-sm md:text-base lg:text-[16px] text-[#252B42] align-middle w-[60px] sm:w-[80px] md:w-[100px] border-r border-[#E9E9E9]">
           2
         </td>
-        <td className="px-6 font-poppins font-normal text-[16px] text-[#9F9F9F] align-middle border-r border-[#E9E9E9]">
-          COPY OF SOCIETIES/TRUST/COMPANY <br /> REGISTRATION/RENEWAL CERTIFICATE, AS APPLICABLE
+        <td className="px-3 sm:px-4 md:px-6 font-poppins font-normal text-xs sm:text-sm md:text-base lg:text-[16px] text-[#9F9F9F] align-middle border-r border-[#E9E9E9]">
+          COPY OF SOCIETIES/TRUST/COMPANY REGISTRATION/RENEWAL CERTIFICATE, AS APPLICABLE
         </td>
-        <td className="px-6 align-middle">
+        <td className="px-3 sm:px-4 md:px-6 align-middle">
           <a href="#" className="inline-block transition-transform hover:scale-110">
              <div className="flex flex-col items-center">
-              <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-[45px] lg:h-[45px]" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 5H25L35 15V40H10V5Z" fill="#E2E2E2" stroke="#CCCCCC" />
                 <path d="M25 5V15H35" fill="#CCCCCC" />
                 <rect x="12" y="28" width="21" height="10" rx="2" fill="#C43E3E" />
@@ -900,39 +850,39 @@ const Academics = () => {
           {/* <h2 className="text-center font-bold text-[40px] text-[#252B42] mb-12">Mandatory Disclosure</h2> */}
           <div className="space-y-4">
             {mandatoryItems.map((item) => (
-              <div key={item.id} className="bg-white rounded-[10px] overflow-hidden shadow-md border border-[#E9E9E9]">
-                <div className="flex items-center h-[89px] cursor-pointer" onClick={() => toggleAccordion(item.id)}>
-                  <div className="flex items-center justify-center shrink-0 w-[104px] h-full bg-[#3E3F95] text-white text-3xl">{item.icon}</div>
-                  <div className="flex-1 flex justify-between items-center px-8">
-                    <h3 className="text-[20px] font-semibold text-[#3E3F95]">{item.title}</h3>
-                    <span className="text-2xl text-[#3E3F95]">{openIndex === item.id ? '−' : '+'}</span>
+              <div key={item.id} className="bg-white rounded-[8px] sm:rounded-[10px] overflow-hidden shadow-md border border-[#E9E9E9]">
+                <div className="flex items-center min-h-[60px] sm:min-h-[70px] md:h-[89px] cursor-pointer" onClick={() => toggleAccordion(item.id)}>
+                  <div className="flex items-center justify-center shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-[104px] md:h-full bg-[#3E3F95] text-white text-xl sm:text-2xl md:text-3xl">{item.icon}</div>
+                  <div className="flex-1 flex justify-between items-center px-4 sm:px-6 md:px-8">
+                    <h3 className="text-sm sm:text-base md:text-lg lg:text-[20px] font-semibold text-[#3E3F95]">{item.title}</h3>
+                    <span className="text-xl sm:text-2xl text-[#3E3F95]">{openIndex === item.id ? '−' : '+'}</span>
                   </div>
                 </div>
                 <AnimatePresence>
                   {openIndex === item.id && (
                     <motion.div initial={{ height: 0 }} animate={{ height: "auto" }} exit={{ height: 0 }} className="overflow-hidden bg-[#F9F9F9]">
-                      <div className="p-8">
+                      <div className="p-4 sm:p-6 md:p-8">
                         <div className="overflow-x-auto border border-[#E9E9E9] rounded-lg bg-white">
-                          <table className="w-full text-sm border-collapse">
+                          <table className="w-full text-xs sm:text-sm border-collapse">
                             <thead className="bg-[#F9F9F9] text-[#9F9F9F]">
-                              <tr className="h-[60px]">
-                                <th className="px-6 text-left border-r border-[#E9E9E9]">SLNO</th>
-                                <th className="px-6 text-left border-r border-[#E9E9E9]">INFORMATION</th>
-                                <th className="px-6 text-left">DETAILS</th>
+                              <tr className="h-[50px] sm:h-[55px] md:h-[60px]">
+                                <th className="px-3 sm:px-4 md:px-6 text-left border-r border-[#E9E9E9] text-xs sm:text-sm">SLNO</th>
+                                <th className="px-3 sm:px-4 md:px-6 text-left border-r border-[#E9E9E9] text-xs sm:text-sm">INFORMATION</th>
+                                <th className="px-3 sm:px-4 md:px-6 text-left text-xs sm:text-sm">DETAILS</th>
                               </tr>
                             </thead>
                             <tbody className="text-[#252B42]">
-                              <tr className="h-[70px] border-t border-[#E9E9E9]">
-                                <td className="px-6 border-r border-[#E9E9E9]">1</td>
-                                <td className="px-6 border-r border-[#E9E9E9]">NAME OF THE SCHOOL</td>
-                                <td className="px-6">BLUE HORIZON PUBLIC SCHOOL</td>
+                              <tr className="h-[60px] sm:h-[65px] md:h-[70px] border-t border-[#E9E9E9]">
+                                <td className="px-3 sm:px-4 md:px-6 border-r border-[#E9E9E9] text-xs sm:text-sm md:text-base">1</td>
+                                <td className="px-3 sm:px-4 md:px-6 border-r border-[#E9E9E9] text-xs sm:text-sm md:text-base">NAME OF THE SCHOOL</td>
+                                <td className="px-3 sm:px-4 md:px-6 text-xs sm:text-sm md:text-base">BLUE HORIZON PUBLIC SCHOOL</td>
                               </tr>
-                              <tr className="h-[70px] border-t border-[#E9E9E9] bg-[#F9F9F9]">
-                                <td className="px-6 border-r border-[#E9E9E9]">2</td>
-                                <td className="px-6 border-r border-[#E9E9E9]">DOWNLOAD DOCUMENT</td>
-                                <td className="px-6">
+                              <tr className="h-[60px] sm:h-[65px] md:h-[70px] border-t border-[#E9E9E9] bg-[#F9F9F9]">
+                                <td className="px-3 sm:px-4 md:px-6 border-r border-[#E9E9E9] text-xs sm:text-sm md:text-base">2</td>
+                                <td className="px-3 sm:px-4 md:px-6 border-r border-[#E9E9E9] text-xs sm:text-sm md:text-base">DOWNLOAD DOCUMENT</td>
+                                <td className="px-3 sm:px-4 md:px-6">
                                   <a href="#" className="inline-block hover:scale-110 transition-transform">
-                                    <svg width="40" height="40" viewBox="0 0 45 45"><rect x="12" y="28" width="21" height="10" rx="2" fill="#C43E3E" /><text x="15" y="35" fill="white" fontSize="6" fontWeight="bold">PDF</text></svg>
+                                    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-[40px] md:h-[40px]" viewBox="0 0 45 45"><rect x="12" y="28" width="21" height="10" rx="2" fill="#C43E3E" /><text x="15" y="35" fill="white" fontSize="6" fontWeight="bold">PDF</text></svg>
                                   </a>
                                 </td>
                               </tr>

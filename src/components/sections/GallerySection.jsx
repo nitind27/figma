@@ -34,15 +34,20 @@ const GallerySection = ({ images }) => {
               className="group relative"
             >
               {/* aspect-[4/3] se images landscape format mein ek barabar alignment mein aayengi */}
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-md bg-gray-100">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl shadow-gray-200/50 bg-gray-100 group-hover:shadow-2xl group-hover:shadow-[#3E3F95]/30 transition-all duration-500 border border-gray-100/50">
                 <img
                   src={image.image}
                   alt={image.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 
-                {/* Hover Effect (Optional): Image par hover karne par halka shadow/overlay */}
-                <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Premium Hover Overlay with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                {/* Title overlay on hover */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <h3 className="text-white font-bold text-lg">{image.title}</h3>
+                </div>
               </div>
             </motion.div>
           ))}

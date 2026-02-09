@@ -26,20 +26,20 @@ const FAQSection = ({ faqItems }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-gray-100 rounded-lg overflow-hidden"
+            className="bg-gradient-to-r from-gray-50 to-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100/50"
           >
             <button
               onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
-              className="w-full px-5 py-4 flex items-center justify-between text-left transition-colors"
+              className="w-full px-5 py-4 flex items-center justify-between text-left transition-all duration-300 hover:bg-gray-50/50"
             >
               <span className="font-medium text-gray-800 pr-4">
                 {faq.question}
               </span>
               <div
-                className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+                className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 shadow-md ${
                   openFaq === index
-                    ? 'bg-blue-500'
-                    : 'bg-blue-700'
+                    ? 'bg-gradient-to-r from-[#3E3F95] to-[#2e2f75] scale-110'
+                    : 'bg-gradient-to-r from-[#3E3F95] to-[#2e2f75]'
                 }`}
               >
                 <svg

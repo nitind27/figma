@@ -40,16 +40,19 @@ const SecondHeroSection = () => {
         >
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-2xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg"
+            className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50 shadow-xl shadow-blue-500/30 relative overflow-hidden"
           >
-            <svg
-              className="w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
-            </svg>
-            Apply Now
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span className="relative z-10 flex items-center gap-2">
+              <svg
+                className="w-5 h-5 transform group-hover:rotate-12 transition-transform duration-300"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+              </svg>
+              Apply Now
+            </span>
           </Link>
         </motion.div>
       </div>

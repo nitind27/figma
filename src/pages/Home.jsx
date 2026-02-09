@@ -230,10 +230,10 @@ const Home = () => {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-            <div className="flex-1 bg-white rounded-2xl p-8 md:p-10 lg:p-12">
+            <div className="flex-1 bg-white rounded-3xl p-8 md:p-10 lg:p-12 shadow-xl shadow-gray-200/50 border border-gray-100/50 hover:shadow-2xl transition-all duration-500">
               <FAQSection faqItems={faqItems} />
             </div>
-            <div className="flex-1 bg-white rounded-2xl p-8 md:p-10 lg:p-12">
+            <div className="flex-1 bg-white rounded-3xl p-8 md:p-10 lg:p-12 shadow-xl shadow-gray-200/50 border border-gray-100/50 hover:shadow-2xl transition-all duration-500">
               <ContactFormSection />
             </div>
           </div>

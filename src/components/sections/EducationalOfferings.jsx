@@ -28,8 +28,8 @@ const EducationalOfferings = ({ offerings }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+              whileHover={{ y: -8, scale: 1.03 }}
+              className="group bg-gradient-to-br from-white to-gray-50/50 p-6 rounded-2xl shadow-lg shadow-gray-200/50 hover:shadow-2xl hover:shadow-[#3E3F95]/20 transition-all duration-500 border border-gray-100/50 hover:border-[#3E3F95]/30"
             >
               <div className="w-14 h-14 mb-4 rounded-full bg-blue-100 flex items-center justify-center">
                 <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,9 +67,12 @@ const EducationalOfferings = ({ offerings }) => {
               </p>
               <Link
                 to="/the-school"
-                className="text-blue-600 font-medium hover:text-blue-700 transition-colors text-sm"
+                className="group/link inline-flex items-center gap-1 text-[#3E3F95] font-semibold hover:text-[#2e2f75] transition-all duration-300 text-sm"
               >
                 Read More
+                <svg className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             </motion.div>
           ))}
