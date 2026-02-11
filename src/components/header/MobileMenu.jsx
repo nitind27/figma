@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
-import DropdownMenu from './DropdownMenu'
 
 const MobileMenu = ({ isOpen, onClose, menuItems }) => {
   const location = useLocation()
@@ -14,34 +13,128 @@ const MobileMenu = ({ isOpen, onClose, menuItems }) => {
     }))
   }
 
-  const handleItemClick = (path) => {
-    window.location.href = path
-    onClose()
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.35,
+        ease: [0.22, 1, 0.36, 1],
+        staggerChildren: 0.07,
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        duration: 0.35,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 8,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  }
+
+  const dropdownVariants = {
+    hidden: {
+      opacity: 0,
+      height: 0,
+    },
+    visible: {
+      opacity: 1,
+      height: 'auto',
+      transition: {
+        duration: 0.3,
+        ease: [0.22, 1, 0.36, 1],
+        staggerChildren: 0.05,
+      },
+    },
+    exit: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        duration: 0.25,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  }
+
+  const subItemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 4,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.25,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
   }
 
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          className="lg:hidden bg-white border-t"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          className="lg:hidden bg-white/70 backdrop-blur-lg border-t border-white/20 shadow-[0_8px_30px_rgba(0,0,0,0.08)] rounded-b-2xl"
         >
-          <div className="px-4 pt-2 pb-4 space-y-1">
+          <div className="px-4 pt-4 pb-6 space-y-1">
             {menuItems.map((item, index) => {
+              const prevItem = index > 0 ? menuItems[index - 1] : null
+              const showDivider = index > 0 && (
+                (prevItem.type === 'link' && item.type === 'button') ||
+                (prevItem.type === 'dropdown' && item.type === 'button') ||
+                (prevItem.type === 'button' && item.type !== 'button')
+              )
+
               if (item.type === 'dropdown') {
                 return (
-                  <div key={index}>
-                    <button
+                  <motion.div key={index} variants={itemVariants}>
+                    {showDivider && <div className="border-t border-gray-100 my-2" />}
+                    <motion.button
                       onClick={() => toggleDropdown(item.key)}
-                      className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium tracking-wide transition-all duration-300 ${
+                        openDropdowns[item.key]
+                          ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md'
+                          : 'text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:shadow-[0_0_0_1px_rgba(59,130,246,0.2)]'
+                      }`}
                     >
                       <span>{item.label}</span>
-                      <svg
-                        className={`w-4 h-4 transition-transform ${
-                          openDropdowns[item.key] ? 'rotate-180' : ''
-                        }`}
+                      <motion.svg
+                        animate={{
+                          rotate: openDropdowns[item.key] ? 180 : 0,
+                        }}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 300,
+                          damping: 25,
+                        }}
+                        className="w-4 h-4 flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -52,55 +145,72 @@ const MobileMenu = ({ isOpen, onClose, menuItems }) => {
                           strokeWidth={2}
                           d="M19 9l-7 7-7-7"
                         />
-                      </svg>
-                    </button>
-                    {openDropdowns[item.key] && (
-                      <div className="pl-4 space-y-1">
-                        {item.items.map((subItem) => (
-                          <Link
-                            key={subItem.path}
-                            to={subItem.path}
-                            onClick={() => {
-                              onClose()
-                              setOpenDropdowns({})
-                            }}
-                            className="block px-4 py-2 rounded-lg text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-all"
-                          >
-                            {subItem.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
+                      </motion.svg>
+                    </motion.button>
+                    <AnimatePresence>
+                      {openDropdowns[item.key] && (
+                        <motion.div
+                          variants={dropdownVariants}
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                          className="pl-4 pr-2 space-y-1 mt-1"
+                        >
+                          {item.items.map((subItem) => (
+                            <motion.div key={subItem.path} variants={subItemVariants}>
+                              <Link
+                                to={subItem.path}
+                                onClick={() => {
+                                  onClose()
+                                  setOpenDropdowns({})
+                                }}
+                                className={`block px-4 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-300 ${
+                                  location.pathname === subItem.path
+                                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-sm'
+                                    : 'text-gray-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:shadow-[0_0_0_1px_rgba(59,130,246,0.2)]'
+                                }`}
+                              >
+                                {subItem.label}
+                              </Link>
+                            </motion.div>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
                 )
               }
 
               if (item.type === 'button') {
                 return (
-                  <Link
-                    key={index}
-                    to={item.path}
-                    onClick={onClose}
-                    className="block px-4 py-2 rounded-lg text-base font-medium btn-gradient text-white text-center transition-all"
-                  >
-                    {item.label}
-                  </Link>
+                  <motion.div key={index} variants={itemVariants}>
+                    {showDivider && <div className="border-t border-gray-100 my-2" />}
+                    <Link
+                      to={item.path}
+                      onClick={onClose}
+                      className="block px-4 py-3 rounded-xl text-base font-medium tracking-wide bg-gradient-to-r from-indigo-600 via-blue-600 to-blue-500 text-white text-center shadow-md hover:scale-105 hover:shadow-lg transition-all duration-300"
+                    >
+                      {item.label}
+                    </Link>
+                  </motion.div>
                 )
               }
 
               return (
-                <Link
-                  key={index}
-                  to={item.path}
-                  onClick={onClose}
-                  className={`block px-4 py-2 rounded-lg text-base font-medium transition-all ${
-                    location.pathname === item.path
-                      ? 'bg-blue-600 text-white'
-                      : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
-                  }`}
-                >
-                  {item.label}
-                </Link>
+                <motion.div key={index} variants={itemVariants}>
+                  {showDivider && <div className="border-t border-gray-100 my-2" />}
+                  <Link
+                    to={item.path}
+                    onClick={onClose}
+                    className={`block px-4 py-3 rounded-xl text-base font-medium tracking-wide transition-all duration-300 ${
+                      location.pathname === item.path
+                        ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md'
+                        : 'text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:shadow-[0_0_0_1px_rgba(59,130,246,0.2)] hover:scale-[1.02]'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
               )
             })}
           </div>

@@ -89,32 +89,28 @@ const TheSchool = () => {
 
   return (
     <div className="pt-16 md:pt-20">
-      <section className="relative text-white py-16 md:py-20 overflow-hidden">
+      <section className="relative text-white py-12 sm:py-16 md:py-20 overflow-hidden">
         <div
-          className="absolute inset-1 bg-cover bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
               'url(/gallery/6c3e3dd551b6b26721b711c2b843dbdc9ec8da40.jpg)',
-            backgroundPosition: 'center 25%', // ⬆️ thoda upar
+            backgroundPosition: 'center 25%',
           }}
           aria-hidden
         />
 
         <div className="absolute inset-0 bg-black/60" aria-hidden />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[280px] md:min-h-[320px]">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[240px] sm:min-h-[280px] md:min-h-[320px]">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-[1171px] w-full"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white px-2">
               The School
             </h1>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto text-white leading-relaxed mb-8">
-            </p>
-
-
           </motion.div>
         </div>
       </section>
@@ -125,13 +121,11 @@ const TheSchool = () => {
 
             {/* LEFT SIDE – Images */}
             <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
-
               <img
                 src="/Group 1707480967.png"
                 alt="Experience Advisor"
-                className="w-full max-w-full h-auto object-cover"
+                className="w-full max-w-full h-auto object-contain"
               />
-
             </div>
 
             {/* RIGHT SIDE – Content */}
@@ -247,8 +241,8 @@ const TheSchool = () => {
       </section>
 
 
-      <section className="w-full min-h-[120px] sm:h-[150px] md:h-[173px] bg-[#3E3F95] flex items-center justify-center px-4 sm:px-6 py-6 sm:py-8">
-        <p className="max-w-3xl text-center text-white text-sm sm:text-base md:text-[18px] leading-relaxed sm:leading-7 font-poppins">
+      <section className="w-full min-h-[100px] sm:min-h-[120px] md:min-h-[150px] lg:h-[173px] bg-[#3E3F95] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10">
+        <p className="max-w-3xl text-center text-white text-xs xs:text-sm sm:text-base md:text-lg lg:text-[18px] leading-relaxed sm:leading-6 md:leading-7 font-poppins">
           We draw inspiration from visionary educators, engaged parents, and the changing needs of the modern world.
           By combining traditional values with modern teaching methods, we aim to empower our students with knowledge,
           integrity, and a lifelong love for learning.
@@ -301,10 +295,10 @@ const TheSchool = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center order-1 lg:order-2"
+              className="relative h-[250px] xs:h-[300px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] flex items-center justify-center order-1 lg:order-2 mb-6 lg:mb-0"
             >
               {/* 1. The Main Tall Background Image (Left side) */}
-              <div className="absolute left-0 top-0 w-[70%] h-[90%] overflow-hidden rounded-2xl sm:rounded-3xl lg:rounded-[40px] z-10 shadow-xl">
+              <div className="absolute left-0 top-0 w-[70%] h-[85%] sm:h-[90%] overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-[40px] z-10 shadow-xl">
                 <img
                   src="/Rectangle 34624680.png"
                   alt="Students in Library"
@@ -313,7 +307,7 @@ const TheSchool = () => {
               </div>
 
               {/* 2. The Overlapping Foreground Image (Bottom Right) */}
-              <div className="absolute right-0 bottom-2 sm:bottom-4 w-[65%] h-[50%] overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-[30px] z-30 shadow-2xl border-2 sm:border-4 border-white">
+              <div className="absolute right-0 bottom-1 sm:bottom-2 md:bottom-4 w-[60%] sm:w-[65%] h-[45%] sm:h-[50%] overflow-hidden rounded-lg sm:rounded-xl lg:rounded-[30px] z-30 shadow-2xl border-2 sm:border-3 md:border-4 border-white">
                 <img
                   src="/Rectangle 34624681.png"
                   alt="Students Studying"
@@ -322,22 +316,31 @@ const TheSchool = () => {
               </div>
 
               {/* 3. The "21+" Floating Badge (Top Right) */}
-              <div className="absolute top-4 sm:top-6 md:top-10 right-2 sm:right-4 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-black rounded-full flex items-center justify-center z-20 shadow-lg border-[1px] border-blue-400">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                animate={{ y: [0, -10, 0] }}
+                transition={{ 
+                  opacity: { duration: 0.6, delay: 0.3 },
+                  scale: { duration: 0.6, delay: 0.3 },
+                  y: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                }}
+                className="absolute top-2 sm:top-4 md:top-6 lg:top-10 right-1 sm:right-2 md:right-4 w-16 h-16 xs:w-20 xs:h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-black rounded-full flex items-center justify-center z-20 shadow-lg border-[1px] border-blue-400"
+              >
                 <div className="text-white text-center">
-                  <span className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold font-poppins">21+</span>
+                  <span className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-bold font-poppins">21+</span>
                 </div>
-
-                {/* Optional: The blue dashed lines/grid effect from your image */}
-                <div className="absolute -inset-2 sm:-inset-4 border-2 border-dashed border-blue-400 opacity-30 rounded-lg -z-10"></div>
-              </div>
+                <div className="absolute -inset-1 sm:-inset-2 md:-inset-4 border-2 border-dashed border-blue-400 opacity-30 rounded-lg -z-10"></div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
       </section>
 
 
-      <section className="w-full min-h-[120px] sm:h-[150px] md:h-[173px] bg-[#3E3F95] flex items-center justify-center px-4 sm:px-6 py-6 sm:py-8">
-        <p className="max-w-4xl text-center text-white text-sm sm:text-base md:text-[18px] leading-relaxed sm:leading-7 font-poppins">
+      <section className="w-full min-h-[100px] sm:min-h-[120px] md:min-h-[150px] lg:h-[173px] bg-[#3E3F95] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10">
+        <p className="max-w-4xl text-center text-white text-xs xs:text-sm sm:text-base md:text-lg lg:text-[18px] leading-relaxed sm:leading-6 md:leading-7 font-poppins">
           Our approach emphasizes holistic development, ensuring that every child grows intellectually, emotionally, socially, and ethically. Through guidance, discipline, and encouragement, we strive to empower our students to become thoughtful individuals and responsible global citizens.
         </p>
       </section>
@@ -351,38 +354,41 @@ const TheSchool = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative flex items-center justify-center min-h-[300px] sm:min-h-[380px] md:min-h-[450px] order-2 lg:order-1"
+              className="relative flex items-center justify-center min-h-[250px] xs:min-h-[300px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[450px] order-2 lg:order-1 mb-8 lg:mb-0"
             >
               {/* 1. Main Logo Container (White Card) */}
-              <div className="bg-white rounded-2xl sm:rounded-3xl lg:rounded-[40px] shadow-2xl p-6 sm:p-8 md:p-12 w-[85%] h-[220px] sm:h-[280px] md:h-[320px] flex flex-col items-center justify-center relative">
-                {/* Replace this with your actual Logo Image */}
+              <div className="bg-white rounded-xl sm:rounded-2xl lg:rounded-[40px] shadow-2xl p-4 sm:p-6 md:p-8 lg:p-12 w-[90%] sm:w-[85%] h-[180px] xs:h-[220px] sm:h-[250px] md:h-[280px] lg:h-[320px] flex flex-col items-center justify-center relative">
                 <img
                   src="/LPS LOGO 1.png"
                   alt="LPS Logo"
-                  className="max-w-full h-auto object-contain"
+                  className="max-w-[80%] sm:max-w-[85%] md:max-w-full h-auto object-contain"
                 />
               </div>
 
               {/* 2. Overlapping LPS Meaning Card (Bottom Right) */}
-              <div
-                className="absolute bottom-[-30px] sm:bottom-[-40px] md:bottom-[-55px] right-4 sm:right-10 md:right-20 w-[60%] sm:w-[55%] md:w-[280px] p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl lg:rounded-[35px] shadow-2xl z-20"
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="absolute bottom-[-20px] xs:bottom-[-25px] sm:bottom-[-30px] md:bottom-[-40px] lg:bottom-[-55px] right-2 xs:right-4 sm:right-6 md:right-10 lg:right-20 w-[65%] xs:w-[60%] sm:w-[55%] md:w-[280px] p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 rounded-xl sm:rounded-2xl lg:rounded-[35px] shadow-2xl z-20"
                 style={{ background: "#3E4095" }}
               >
-                <ul className="space-y-2 sm:space-y-3 md:space-y-4">
-                  <li className="flex items-center text-white font-poppins font-bold text-base sm:text-lg md:text-xl lg:text-2xl">
-                    <span className="w-2 h-2 sm:w-3 sm:h-3 bg-[#00C3FF] rounded-full mr-2 sm:mr-4"></span>
+                <ul className="space-y-1.5 xs:space-y-2 sm:space-y-2.5 md:space-y-3 lg:space-y-4">
+                  <li className="flex items-center text-white font-poppins font-bold text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl">
+                    <span className="w-1.5 h-1.5 xs:w-2 xs:h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 bg-[#00C3FF] rounded-full mr-2 xs:mr-3 sm:mr-4 flex-shrink-0"></span>
                     L = Learn
                   </li>
-                  <li className="flex items-center text-white font-poppins font-bold text-base sm:text-lg md:text-xl lg:text-2xl">
-                    <span className="w-2 h-2 sm:w-3 sm:h-3 bg-[#00C3FF] rounded-full mr-2 sm:mr-4"></span>
+                  <li className="flex items-center text-white font-poppins font-bold text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl">
+                    <span className="w-1.5 h-1.5 xs:w-2 xs:h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 bg-[#00C3FF] rounded-full mr-2 xs:mr-3 sm:mr-4 flex-shrink-0"></span>
                     P = Progress
                   </li>
-                  <li className="flex items-center text-white font-poppins font-bold text-base sm:text-lg md:text-xl lg:text-2xl">
-                    <span className="w-2 h-2 sm:w-3 sm:h-3 bg-[#00C3FF] rounded-full mr-2 sm:mr-4"></span>
+                  <li className="flex items-center text-white font-poppins font-bold text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl">
+                    <span className="w-1.5 h-1.5 xs:w-2 xs:h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 bg-[#00C3FF] rounded-full mr-2 xs:mr-3 sm:mr-4 flex-shrink-0"></span>
                     S = Shine
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             </motion.div>
 
 
@@ -490,8 +496,8 @@ const TheSchool = () => {
                   boxShadow: "0px 0px 24px 0px rgba(176, 176, 176, 0.3)"
                 }}
               >
-                <div className="flex items-center justify-center overflow-hidden p-2 sm:p-4 bg-cover h-[200px] sm:h-[250px] md:h-[296px]" style={{ width: "100%", borderRadius: "13px 13px 0 0" }}>
-                  <img src={house.image} alt={house.title} className="w-full h-full rounded-xl sm:rounded-2xl object-cover" />
+                <div className="flex items-center justify-center overflow-hidden p-2 sm:p-4 bg-gray-100 aspect-[4/3] sm:aspect-[5/4] md:aspect-[4/3]" style={{ width: "100%", borderRadius: "13px 13px 0 0" }}>
+                  <img src={house.image} alt={house.title} className="w-full h-full rounded-xl sm:rounded-2xl object-contain" />
                 </div>
                 <div className="p-4 sm:p-6">
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
@@ -578,9 +584,11 @@ const TheSchool = () => {
                   boxShadow: "0px 0px 24px 0px rgba(176, 176, 176, 0.3)"
                 }}
               >
-                <img src={certificate.image} alt={certificate.title} className="w-full h-auto object-cover" />
+                <div className="aspect-[4/3] sm:aspect-[3/2] flex items-center justify-center bg-gray-50 p-2 sm:p-3">
+                  <img src={certificate.image} alt={certificate.title} className="w-full h-full object-contain" />
+                </div>
                 <div className="p-3 sm:p-4 text-center">
-                  <h3 className="text-sm sm:text-base font-semibold text-gray-800 mt-2"
+                  <h3 className="text-xs xs:text-sm sm:text-base font-semibold text-gray-800 mt-2"
                     style={{
                       fontFamily: "Poppins, sans-serif",
                       fontWeight: 600,

@@ -52,35 +52,34 @@ const About = () => {
   return (
     <div className="pt-16 md:pt-20">
       {/* Hero Section - background image with dark overlay, centered content */}
-      <section className="relative text-white py-16 md:py-20 overflow-hidden">
+      <section className="relative text-white py-12 sm:py-16 md:py-20 overflow-hidden">
         <div
-          className="absolute inset-1 bg-cover bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
               'url(/gallery/6c3e3dd551b6b26721b711c2b843dbdc9ec8da40.jpg)',
-            backgroundPosition: 'center 25%', // ⬆️ thoda upar
+            backgroundPosition: 'center 25%',
           }}
           aria-hidden
         />
 
-
         <div className="absolute inset-0 bg-black/60" aria-hidden />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[280px] md:min-h-[320px]">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[240px] sm:min-h-[280px] md:min-h-[320px]">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-[1171px] w-full"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white px-2">
               About Us
             </h1>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto text-white leading-relaxed mb-8">
+            <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto text-white leading-relaxed mb-6 sm:mb-8 px-2">
               Knowledge is power and education is the premise of progress, in every society, in every family. LPS School, being one of the pillars of education is dedicated to instill quality education with unprecedented encouragement in students.
             </p>
             <Link
               to="#mission"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-3.5 font-semibold text-white rounded-[3px] transition-all hover:opacity-95"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-3.5 font-semibold text-white rounded-[3px] transition-all hover:opacity-95 text-sm sm:text-base"
               style={{ background: 'linear-gradient(90deg, #00C3FF 0%, #333493 100%)' }}
             >
               Read More
@@ -96,13 +95,13 @@ const About = () => {
       <section className="bg-white py-10 md:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Pill tabs — match screenshot: active #3E3F95 white bold, inactive white + light grey text + subtle border */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 md:mb-12 px-2">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 md:mb-10 lg:mb-12 px-2">
             {ABOUT_TABS.map((tab) => (
               <button
                 key={tab}
                 type="button"
                 onClick={() => setActiveTab(tab)}
-                className={`px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-colors ${activeTab === tab
+                className={`px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 rounded-full text-[10px] xs:text-xs sm:text-sm font-medium transition-colors ${activeTab === tab
                   ? 'bg-[#3E3F95] text-white font-bold opacity-100'
                   : 'bg-white text-[#B0B0B0] border border-[#E0E0E0] hover:border-[#D0D0D0] hover:text-[#909090]'
                   }`}
@@ -115,10 +114,10 @@ const About = () => {
           {/* Two-column: left ~40% images + 25+ card, right ~60% About Us content */}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-start">
             {/* Left: big image left, small image right, 25+ card */}
-            <div className="lg:col-span-2 relative min-h-[300px] sm:min-h-[380px] md:min-h-[420px] lg:min-h-[520px]">
-              <div className="relative flex gap-2 sm:gap-3 md:gap-4">
+            <div className="lg:col-span-2 relative min-h-[280px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[520px] mb-6 lg:mb-0">
+              <div className="relative flex gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
                 {/* Big image — left, 253×428 (10px smaller), radius 30px */}
-                <div className="flex-shrink-0 w-[55%] max-w-[180px] sm:max-w-[220px] md:max-w-[280px] lg:absolute lg:flex-none lg:w-[253px] lg:h-[428px] lg:max-w-none lg:top-0 lg:left-0">
+                <div className="flex-shrink-0 w-[55%] max-w-[160px] xs:max-w-[180px] sm:max-w-[220px] md:max-w-[260px] lg:absolute lg:flex-none lg:w-[253px] lg:h-[428px] lg:max-w-none lg:top-0 lg:left-0">
                   <img
                     src="/gallery/ab847fa8039547b189052d898aa7f5e128bc235d.png"
                     alt="Students"
@@ -126,7 +125,7 @@ const About = () => {
                   />
                 </div>
                 {/* Small image — right, 255×308 (10px smaller), gap from first */}
-                <div className="flex-shrink-0 w-[45%] max-w-[150px] sm:max-w-[180px] md:max-w-[220px] mt-4 sm:mt-6 md:mt-10 relative lg:absolute lg:mt-0 lg:top-0 lg:left-[268px] lg:w-[255px] lg:h-[308px] lg:max-w-none">
+                <div className="flex-shrink-0 w-[45%] max-w-[130px] xs:max-w-[150px] sm:max-w-[180px] md:max-w-[210px] mt-4 sm:mt-6 md:mt-10 relative lg:absolute lg:mt-0 lg:top-0 lg:left-[268px] lg:w-[255px] lg:h-[308px] lg:max-w-none">
                   <img
                     src="/gallery/417a8a3b4ce57df965081f942599f9b71f0277ab.png"
                     alt="Students on campus"
@@ -136,12 +135,12 @@ const About = () => {
               </div>
               {/* 25+ card — in empty white space, little more right */}
               <div
-                className="absolute bg-black rounded-xl sm:rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 md:px-6 md:py-4 flex items-center gap-2 sm:gap-3 min-w-[160px] sm:min-w-[200px] md:min-w-[230px] shadow-lg z-10 top-[180px] sm:top-[220px] right-0 md:top-[280px] lg:top-[324px] lg:-right-10 lg:left-auto lg:translate-x-0"
+                className="absolute bg-black rounded-xl sm:rounded-2xl px-3 py-2.5 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:px-6 lg:py-4 flex items-center gap-2 sm:gap-3 min-w-[140px] xs:min-w-[160px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[230px] shadow-lg z-10 top-[160px] xs:top-[180px] sm:top-[200px] md:top-[250px] lg:top-[324px] right-2 sm:right-4 md:right-0 lg:-right-10 lg:left-auto lg:translate-x-0"
                 style={{ borderRadius: '18px' }}
               >
-                <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight">25+</span>
-                <span className="w-px h-8 sm:h-10 md:h-12 bg-white/80 flex-shrink-0" aria-hidden />
-                <span className="text-white text-[10px] sm:text-xs md:text-sm font-medium leading-tight">
+                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight">25+</span>
+                <span className="w-px h-6 sm:h-8 md:h-10 lg:h-12 bg-white/80 flex-shrink-0" aria-hidden />
+                <span className="text-white text-[9px] xs:text-[10px] sm:text-xs md:text-sm font-medium leading-tight">
                   Years of<br />Experience
                 </span>
               </div>
@@ -176,11 +175,11 @@ const About = () => {
       </section>
 
       {/* Statistics strip — full-width #3E3F95, 4 cols: Our Teachers, Our Students, Video Lessons, Online Courses */}
-      <section className="py-4 sm:py-6 md:py-8 bg-[#3E3F95]">
+      <section className="py-6 sm:py-6 md:py-8 bg-[#3E3F95]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {/* Our Teachers — 1090+ */}
-            <div className="flex items-center gap-3 sm:gap-4 pr-2 sm:pr-4 border-r border-white/20">
+            <div className="flex items-center gap-3 sm:gap-4 pr-0 sm:pr-4 border-r-0 sm:border-r border-white/20 pb-4 sm:pb-0 border-b sm:border-b-0 border-white/20 sm:border-b-0">
               <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" aria-hidden>
                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_529_611)">
@@ -204,7 +203,7 @@ const About = () => {
               </div>
             </div>
             {/* Our Students — 120+ */}
-            <div className="flex items-center gap-3 sm:gap-4 pr-2 sm:pr-4 border-r border-white/20">
+            <div className="flex items-center gap-3 sm:gap-4 pr-0 sm:pr-4 border-r-0 sm:border-r border-white/20 pb-4 sm:pb-0 border-b sm:border-b-0 border-white/20 sm:border-b-0">
               <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" aria-hidden>
                 <svg width="42" height="49" viewBox="0 0 42 49" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M42 12.2325C42 10.4825 41.0375 8.9075 39.4625 8.1375L25.095 0.945C22.5575 -0.315 19.425 -0.315 16.905 0.945L2.5375 8.1375C0.9625 8.9075 0 10.4825 0 12.2325C0 13.9825 0.9625 15.5575 2.5375 16.3275L6.5275 18.3225C5.69426 20.2698 5.25986 22.3644 5.25 24.4825C5.25 28.665 6.895 32.4625 9.5725 35.28C4.095 36.505 0 41.405 0 47.2325C0 48.195 0.7875 48.9825 1.75 48.9825C2.7125 48.9825 3.5 48.195 3.5 47.2325C3.5 42.4025 7.42 38.4825 12.25 38.4825H13.825C15.9775 39.585 18.4275 40.2325 21 40.2325C23.5725 40.2325 26.0225 39.585 28.175 38.4825H29.75C34.58 38.4825 38.5 42.4025 38.5 47.2325C38.5 48.195 39.2875 48.9825 40.25 48.9825C41.2125 48.9825 42 48.195 42 47.2325C42 41.405 37.905 36.505 32.4275 35.28C35.2043 32.3713 36.7526 28.5039 36.75 24.4825C36.75 22.365 36.295 20.265 35.4725 18.3225L39.4625 16.3275C41.0375 15.5575 42 13.9825 42 12.2325ZM33.25 24.4825C33.25 31.2375 27.755 36.7325 21 36.7325C14.245 36.7325 8.75 31.2375 8.75 24.4825C8.75 22.9075 9.065 21.3325 9.6425 19.88L16.905 23.5025C18.165 24.15 19.5825 24.4825 21 24.4825C22.4175 24.4825 23.835 24.15 25.095 23.52L26.25 22.9425V26.2325C26.25 27.195 27.0375 27.9825 28 27.9825C28.9625 27.9825 29.75 27.195 29.75 26.2325V21.1925L32.3575 19.8975C32.935 21.3325 33.25 22.9075 33.25 24.4825ZM37.905 13.195L23.5375 20.3875C21.98 21.175 20.0375 21.175 18.48 20.3875L4.095 13.195C3.7275 13.02 3.5 12.6525 3.5 12.2325C3.5 11.8125 3.7275 11.445 4.095 11.27L18.4625 4.0775C19.25 3.6925 20.125 3.4825 21 3.4825C21.875 3.4825 22.75 3.6925 23.5375 4.0775L37.905 11.27C38.2725 11.445 38.5 11.8125 38.5 12.2325C38.5 12.6525 38.2725 13.02 37.905 13.195Z" fill="white"/>
@@ -217,7 +216,7 @@ const About = () => {
               </div>
             </div>
             {/* Total Video Lessons — 1090+ */}
-            <div className="flex items-center gap-3 sm:gap-4 pr-2 sm:pr-4 border-r border-white/20">
+            <div className="flex items-center gap-3 sm:gap-4 pr-0 sm:pr-4 border-r-0 sm:border-r border-white/20 pb-4 sm:pb-0 border-b sm:border-b-0 border-white/20 sm:border-b-0">
               <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" aria-hidden>
              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M49.0533 27.4137C48.6356 27.4137 48.235 27.5797 47.9396 27.8751C47.6442 28.1704 47.4783 28.571 47.4783 28.9888V45.0538C47.4783 46.9158 45.9628 48.4312 44.1008 48.4312H8.45328C7.5578 48.4303 6.69925 48.0742 6.06605 47.441C5.43285 46.8078 5.07671 45.9492 5.07578 45.0538V23.6513H27.0033C27.421 23.6513 27.8216 23.4853 28.117 23.1899C28.4123 22.8946 28.5783 22.494 28.5783 22.0763C28.5783 21.6585 28.4123 21.2579 28.117 20.9626C27.8216 20.6672 27.421 20.5013 27.0033 20.5013H5.07578V15.9163C5.07578 14.063 6.58253 12.5563 8.43578 12.5563H23.3808C23.7985 12.5563 24.1991 12.3903 24.4945 12.0949C24.7898 11.7996 24.9558 11.399 24.9558 10.9813C24.9558 10.5635 24.7898 10.1629 24.4945 9.86756C24.1991 9.57219 23.7985 9.40625 23.3808 9.40625H8.43578C6.70979 9.4081 5.05502 10.0946 3.83456 11.315C2.6141 12.5355 1.92763 14.1903 1.92578 15.9163V45.0538C1.92763 46.7844 2.61595 48.4436 3.83969 49.6673C5.06343 50.8911 6.72265 51.5794 8.45328 51.5812H44.1008C45.8311 51.5789 47.4899 50.8904 48.7132 49.6667C49.9366 48.443 50.6247 46.7841 50.6265 45.0538V28.9888C50.6268 28.782 50.5862 28.5772 50.5073 28.3862C50.4283 28.1951 50.3125 28.0214 50.1664 27.8752C50.0202 27.7289 49.8467 27.6128 49.6557 27.5337C49.4648 27.4545 49.26 27.4137 49.0533 27.4137Z" fill="white"/>
@@ -234,7 +233,7 @@ const About = () => {
               </div>
             </div>
             {/* Our Online Courses — 1090+ */}
-            <div className="flex items-center gap-3 sm:gap-4">
+            <div className="flex items-center gap-3 sm:gap-4 pb-0">
               <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" aria-hidden>
                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M21.2108 47.4022H8.82078C6.75578 47.4022 5.07578 45.7292 5.07578 43.6747V20.5222H50.9083V26.6665C50.9083 27.0842 51.0742 27.4848 51.3696 27.7802C51.665 28.0755 52.0656 28.2415 52.4833 28.2415C52.901 28.2415 53.3016 28.0755 53.597 27.7802C53.8923 27.4848 54.0583 27.0842 54.0583 26.6665V12.3165C54.0564 10.493 53.3312 8.74476 52.0419 7.45538C50.7525 6.166 49.0042 5.44082 47.1808 5.43896H8.82078C6.99514 5.43896 5.24402 6.16299 3.95146 7.45227C2.6589 8.74155 1.93041 10.4908 1.92578 12.3165V43.6765C1.93041 45.5021 2.6589 47.2514 3.95146 48.5407C5.24402 49.8299 6.99514 50.554 8.82078 50.554H21.2108C21.6287 50.554 22.0296 50.3879 22.3251 50.0924C22.6206 49.7969 22.7867 49.396 22.7867 48.9781C22.7867 48.5601 22.6206 48.1593 22.3251 47.8638C22.0296 47.5682 21.6287 47.4022 21.2108 47.4022ZM8.82078 8.58721H47.1808C49.237 8.58721 50.9083 10.2602 50.9083 12.3147V17.3705H5.07578V12.3165C5.07578 10.2602 6.75578 8.58721 8.82078 8.58721Z" fill="white"/>
@@ -390,7 +389,7 @@ const About = () => {
               </Link>
             </div>
             {/* Right — profile card: 518×512px, radius 30px per design */}
-            <div className="w-full max-w-[518px] h-[350px] sm:h-[400px] md:h-[450px] lg:h-[512px] rounded-2xl sm:rounded-[30px] overflow-hidden shadow-lg mx-auto lg:mx-0 flex flex-col order-1 lg:order-2">
+            <div className="w-full max-w-[518px] h-[300px] xs:h-[350px] sm:h-[380px] md:h-[420px] lg:h-[512px] rounded-2xl sm:rounded-[30px] overflow-hidden shadow-lg mx-auto lg:mx-0 flex flex-col order-1 lg:order-2">
               <div className="relative flex-1 min-h-0 bg-gray-200">
                 <img
                   src="/gallery/b2e423b5dd90c153d6c2fd93fb1e22e42169f6a3.png"
@@ -399,11 +398,11 @@ const About = () => {
                 />
               </div>
               <div
-                className="bg-[#3E3F95] px-4 sm:px-6 py-3 sm:py-5 rounded-b-2xl sm:rounded-b-[30px] text-left flex-shrink-0 min-h-[80px] sm:min-h-[100px] md:min-h-[112px] flex flex-col justify-center"
+                className="bg-[#3E3F95] px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 md:py-5 rounded-b-2xl sm:rounded-b-[30px] text-left flex-shrink-0 min-h-[70px] xs:min-h-[80px] sm:min-h-[90px] md:min-h-[100px] lg:min-h-[112px] flex flex-col justify-center"
                 style={{ minWidth: '100%' }}
               >
                 <p
-                  className="text-white uppercase text-lg sm:text-xl md:text-2xl lg:text-[36.82px] leading-tight sm:leading-[57.85px]"
+                  className="text-white uppercase text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[36.82px] leading-tight sm:leading-normal md:leading-[57.85px]"
                   style={{
                     fontFamily: 'Poppins, sans-serif',
                     fontWeight: 700,
@@ -413,7 +412,7 @@ const About = () => {
                   Shailesh Bhai Savani
                 </p>
                 <p
-                  className="text-white uppercase mt-0 text-base sm:text-lg md:text-xl lg:text-[36.82px] leading-tight sm:leading-[57.85px]"
+                  className="text-white uppercase mt-0 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-[36.82px] leading-tight sm:leading-normal md:leading-[57.85px]"
                   style={{
                     fontFamily: 'Poppins, sans-serif',
                     fontWeight: 400,
@@ -433,7 +432,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
             {/* Left — profile card: 518×512px, radius 30px */}
-            <div className="w-full max-w-[518px] h-[350px] sm:h-[400px] md:h-[450px] lg:h-[512px] rounded-2xl sm:rounded-[30px] overflow-hidden shadow-lg mx-auto lg:mx-0 flex flex-col order-2 lg:order-1">
+            <div className="w-full max-w-[518px] h-[300px] xs:h-[350px] sm:h-[380px] md:h-[420px] lg:h-[512px] rounded-2xl sm:rounded-[30px] overflow-hidden shadow-lg mx-auto lg:mx-0 flex flex-col order-2 lg:order-1">
               <div className="relative flex-1 min-h-0 bg-gray-200">
                 <img
                   src="/photos/2.png"
@@ -442,11 +441,11 @@ const About = () => {
                 />
               </div>
               <div
-                className="bg-[#3E3F95] px-4 sm:px-6 py-3 sm:py-5 rounded-b-2xl sm:rounded-b-[30px] text-left flex-shrink-0 min-h-[80px] sm:min-h-[100px] md:min-h-[112px] flex flex-col justify-center"
+                className="bg-[#3E3F95] px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 md:py-5 rounded-b-2xl sm:rounded-b-[30px] text-left flex-shrink-0 min-h-[70px] xs:min-h-[80px] sm:min-h-[90px] md:min-h-[100px] lg:min-h-[112px] flex flex-col justify-center"
                 style={{ minWidth: '100%' }}
               >
                 <p
-                  className="text-white uppercase text-lg sm:text-xl md:text-2xl lg:text-[36.82px] leading-tight sm:leading-[57.85px]"
+                  className="text-white uppercase text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[36.82px] leading-tight sm:leading-normal md:leading-[57.85px]"
                   style={{
                     fontFamily: 'Poppins, sans-serif',
                     fontWeight: 700,
@@ -456,7 +455,7 @@ const About = () => {
                   SHAILESH BHAI SAVANI
                 </p>
                 <p
-                  className="text-white uppercase mt-0 text-base sm:text-lg md:text-xl lg:text-[36.82px] leading-tight sm:leading-[57.85px]"
+                  className="text-white uppercase mt-0 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-[36.82px] leading-tight sm:leading-normal md:leading-[57.85px]"
                   style={{
                     fontFamily: 'Poppins, sans-serif',
                     fontWeight: 400,
@@ -552,7 +551,7 @@ const About = () => {
               </Link>
             </div>
             {/* Right — profile card: 518×512px, radius 30px */}
-            <div className="w-full max-w-[518px] h-[350px] sm:h-[400px] md:h-[450px] lg:h-[512px] rounded-2xl sm:rounded-[30px] overflow-hidden shadow-lg mx-auto lg:mx-0 flex flex-col order-1 lg:order-2">
+            <div className="w-full max-w-[518px] h-[300px] xs:h-[350px] sm:h-[380px] md:h-[420px] lg:h-[512px] rounded-2xl sm:rounded-[30px] overflow-hidden shadow-lg mx-auto lg:mx-0 flex flex-col order-1 lg:order-2">
               <div className="relative flex-1 min-h-0 bg-gray-200">
                 <img
                   src="/photos/3.png"
@@ -561,28 +560,24 @@ const About = () => {
                 />
               </div>
               <div
-                className="bg-[#3E3F95] px-6 py-5 rounded-b-[30px] text-left flex-shrink-0 min-h-[112px] flex flex-col justify-center"
+                className="bg-[#3E3F95] px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 md:py-5 rounded-b-2xl sm:rounded-b-[30px] text-left flex-shrink-0 min-h-[70px] xs:min-h-[80px] sm:min-h-[90px] md:min-h-[100px] lg:min-h-[112px] flex flex-col justify-center"
                 style={{ minWidth: '100%' }}
               >
                 <p
-                  className="text-white uppercase"
+                  className="text-white uppercase text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[36.82px] leading-tight sm:leading-normal md:leading-[57.85px]"
                   style={{
                     fontFamily: 'Poppins, sans-serif',
                     fontWeight: 700,
-                    fontSize: '36.82px',
-                    lineHeight: '57.85px',
                     letterSpacing: '0.41px',
                   }}
                 >
                   SHAILESH BHAI SAVANI
                 </p>
                 <p
-                  className="text-white uppercase mt-0"
+                  className="text-white uppercase mt-0 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-[36.82px] leading-tight sm:leading-normal md:leading-[57.85px]"
                   style={{
                     fontFamily: 'Poppins, sans-serif',
                     fontWeight: 400,
-                    fontSize: '36.82px',
-                    lineHeight: '57.85px',
                     letterSpacing: '0.41px',
                   }}
                 >
@@ -599,13 +594,13 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
             {/* Left — profile card */}
-            <div className="w-full max-w-[518px] h-[350px] sm:h-[400px] md:h-[450px] lg:h-[512px] rounded-2xl sm:rounded-[30px] overflow-hidden shadow-lg mx-auto lg:mx-0 flex flex-col order-2 lg:order-1">
+            <div className="w-full max-w-[518px] h-[300px] xs:h-[350px] sm:h-[380px] md:h-[420px] lg:h-[512px] rounded-2xl sm:rounded-[30px] overflow-hidden shadow-lg mx-auto lg:mx-0 flex flex-col order-2 lg:order-1">
               <div className="relative flex-1 min-h-0 bg-gray-200">
                 <img src="/photos/4.png" alt="From Principal" className="absolute inset-0 w-full h-full object-cover object-top" />
               </div>
-              <div className="bg-[#3E3F95] px-4 sm:px-6 py-3 sm:py-5 rounded-b-2xl sm:rounded-b-[30px] text-left flex-shrink-0 min-h-[80px] sm:min-h-[100px] md:min-h-[112px] flex flex-col justify-center" style={{ minWidth: '100%' }}>
-                <p className="text-white uppercase text-lg sm:text-xl md:text-2xl lg:text-[36.82px] leading-tight sm:leading-[57.85px]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, letterSpacing: '0.41px' }}>SHAILESH BHAI SHAVANI</p>
-                <p className="text-white uppercase mt-0 text-base sm:text-lg md:text-xl lg:text-[36.82px] leading-tight sm:leading-[57.85px]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400, letterSpacing: '0.41px' }}>Principal</p>
+              <div className="bg-[#3E3F95] px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 md:py-5 rounded-b-2xl sm:rounded-b-[30px] text-left flex-shrink-0 min-h-[70px] xs:min-h-[80px] sm:min-h-[90px] md:min-h-[100px] lg:min-h-[112px] flex flex-col justify-center" style={{ minWidth: '100%' }}>
+                <p className="text-white uppercase text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[36.82px] leading-tight sm:leading-normal md:leading-[57.85px]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, letterSpacing: '0.41px' }}>SHAILESH BHAI SHAVANI</p>
+                <p className="text-white uppercase mt-0 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-[36.82px] leading-tight sm:leading-normal md:leading-[57.85px]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400, letterSpacing: '0.41px' }}>Principal</p>
               </div>
             </div>
             {/* Right — paragraph */}
@@ -687,13 +682,13 @@ const About = () => {
                 </svg>
               </Link>
             </div>
-            <div className="w-full max-w-[518px] h-[350px] sm:h-[400px] md:h-[450px] lg:h-[512px] rounded-2xl sm:rounded-[30px] overflow-hidden shadow-lg mx-auto lg:mx-0 flex flex-col order-1 lg:order-2">
+            <div className="w-full max-w-[518px] h-[300px] xs:h-[350px] sm:h-[380px] md:h-[420px] lg:h-[512px] rounded-2xl sm:rounded-[30px] overflow-hidden shadow-lg mx-auto lg:mx-0 flex flex-col order-1 lg:order-2">
               <div className="relative flex-1 min-h-0 bg-gray-200">
                 <img src="/photos/2.png" alt="From Advisor" className="absolute inset-0 w-full h-full object-cover object-top" />
               </div>
-              <div className="bg-[#3E3F95] px-4 sm:px-6 py-3 sm:py-5 rounded-b-2xl sm:rounded-b-[30px] text-left flex-shrink-0 min-h-[80px] sm:min-h-[100px] md:min-h-[112px] flex flex-col justify-center" style={{ minWidth: '100%' }}>
-                <p className="text-white uppercase text-lg sm:text-xl md:text-2xl lg:text-[36.82px] leading-tight sm:leading-[57.85px]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, letterSpacing: '0.41px' }}>SHAILESH BHAI SAVAN</p>
-                <p className="text-white uppercase mt-0 text-base sm:text-lg md:text-xl lg:text-[36.82px] leading-tight sm:leading-[57.85px]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400, letterSpacing: '0.41px' }}>Advisor</p>
+              <div className="bg-[#3E3F95] px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 md:py-5 rounded-b-2xl sm:rounded-b-[30px] text-left flex-shrink-0 min-h-[70px] xs:min-h-[80px] sm:min-h-[90px] md:min-h-[100px] lg:min-h-[112px] flex flex-col justify-center" style={{ minWidth: '100%' }}>
+                <p className="text-white uppercase text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[36.82px] leading-tight sm:leading-normal md:leading-[57.85px]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, letterSpacing: '0.41px' }}>SHAILESH BHAI SAVAN</p>
+                <p className="text-white uppercase mt-0 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-[36.82px] leading-tight sm:leading-normal md:leading-[57.85px]" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400, letterSpacing: '0.41px' }}>Advisor</p>
               </div>
             </div>
           </div>
@@ -762,11 +757,11 @@ const About = () => {
                 key={index}
                 className="bg-white rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition p-3 sm:p-4 text-center"
               >
-                <div className="w-full h-40 sm:h-48 rounded-lg overflow-hidden bg-gray-100 mb-3 sm:mb-4">
+                <div className="w-full aspect-[3/4] sm:aspect-[4/5] rounded-lg overflow-hidden bg-gray-100 mb-3 sm:mb-4 flex items-center justify-center">
                   <img
-                    src="/photos/5.png"   // replace with your image path
+                    src="/photos/5.png"
                     alt={item.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
 
@@ -845,11 +840,11 @@ const About = () => {
                 key={index}
                 className="bg-white rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition p-3 sm:p-4 text-center"
               >
-                <div className="w-full h-40 sm:h-48 rounded-lg overflow-hidden bg-gray-100 mb-3 sm:mb-4">
+                <div className="w-full aspect-[3/4] sm:aspect-[4/5] rounded-lg overflow-hidden bg-gray-100 mb-3 sm:mb-4 flex items-center justify-center">
                   <img
-                    src="/photos/2.png"   // replace with your image path
+                    src="/photos/2.png"
                     alt={item.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
 
