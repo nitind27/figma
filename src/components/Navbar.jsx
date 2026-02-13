@@ -69,13 +69,13 @@ const Navbar = () => {
             />
           </div>
         </div>
-        <MobileMenu
-          isOpen={isOpen}
-          onClose={() => setIsOpen(false)}
-          menuItems={menuItems}
-        />
       </motion.nav>
       <TopBar />
+      <MobileMenu
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        menuItems={menuItems}
+      />
     </div>
   )
 }

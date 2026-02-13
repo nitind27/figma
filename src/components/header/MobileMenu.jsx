@@ -16,11 +16,11 @@ const MobileMenu = ({ isOpen, onClose, menuItems }) => {
   const containerVariants = {
     hidden: {
       opacity: 0,
-      y: -20,
+      x: '100%',
     },
     visible: {
       opacity: 1,
-      y: 0,
+      x: 0,
       transition: {
         duration: 0.35,
         ease: [0.22, 1, 0.36, 1],
@@ -29,10 +29,28 @@ const MobileMenu = ({ isOpen, onClose, menuItems }) => {
     },
     exit: {
       opacity: 0,
-      y: -20,
+      x: '100%',
       transition: {
         duration: 0.35,
         ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  }
+
+  const backdropVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.3,
       },
     },
   }
@@ -94,14 +112,26 @@ const MobileMenu = ({ isOpen, onClose, menuItems }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          className="lg:hidden bg-white/70 backdrop-blur-lg border-t border-white/20 shadow-[0_8px_30px_rgba(0,0,0,0.08)] rounded-b-2xl"
-        >
-          <div className="px-4 pt-4 pb-6 space-y-1">
+        <>
+          {/* Backdrop */}
+          <motion.div
+            variants={backdropVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            onClick={onClose}
+            className="lg:hidden fixed inset-0 bg-black/50 z-[100]"
+          />
+          {/* Sidebar Menu */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="lg:hidden fixed top-0 right-0 h-screen w-80 max-w-[85vw] bg-white shadow-2xl z-[110] overflow-y-auto flex flex-col"
+            style={{ maxHeight: '100vh' }}
+          >
+            <div className="px-4 pt-24 pb-8 space-y-2 flex-1">
             {menuItems.map((item, index) => {
               const prevItem = index > 0 ? menuItems[index - 1] : null
               const showDivider = index > 0 && (
@@ -213,8 +243,9 @@ const MobileMenu = ({ isOpen, onClose, menuItems }) => {
                 </motion.div>
               )
             })}
-          </div>
-        </motion.div>
+            </div>
+          </motion.div>
+        </>
       )}
     </AnimatePresence>
   )
