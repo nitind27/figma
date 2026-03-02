@@ -68,7 +68,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative w-full min-h-[90vh] flex items-center bg-white overflow-x-hidden py-16 lg:py-0 font-poppins">
+    <section className=" w-full min-h-[90vh] flex items-center bg-white overflow-x-hidden py-16 lg:py-0 font-poppins">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.03),transparent_50%)] pointer-events-none" />
       
       <motion.div
