@@ -68,9 +68,9 @@ const HeroSection = () => {
   };
 
   return (
-    <section className=" w-full min-h-[90vh] flex items-center bg-white overflow-x-hidden py-16 lg:py-0 font-poppins">
+    <section className=" w-full min-h-[90vh] flex items-center bg-white  py-16 lg:py-0 font-poppins">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.03),transparent_50%)] pointer-events-none" />
-      
+{/*       
       <motion.div
         animate={{
           scale: [1, 1.05, 1],
@@ -95,7 +95,7 @@ const HeroSection = () => {
           ease: 'easeInOut',
         }}
         className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-[#3E3F95]/10 via-[#0DBBF1]/10 to-transparent rounded-full blur-3xl -ml-32 -mb-32"
-      />
+      /> */}
 
       <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">

@@ -81,7 +81,7 @@ const Footer = () => {
 
       {/* Main footer - light background */}
       <div className="bg-gradient-to-b from-[#F6F7FA] to-white text-[#6C6D73]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-6 lg:gap-8">
             {/* 1. Logo & Fees Pay */}
             <motion.div
@@ -208,7 +208,7 @@ const Footer = () => {
                     className="group w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center hover:bg-[#3E3F95] hover:border-[#3E3F95] transition-all duration-300 hover:scale-110 shadow-sm hover:shadow-lg"
                     aria-label={social.name}
                   >
-                    <span className="text-[#3E3F95] group-hover:text-white transition-colors duration-300">
+                    <span className="text-[#3E3F95] group-hover:text-white transition-colors duration-300 ">
                       {social.icon}
                     </span>
                   </a>

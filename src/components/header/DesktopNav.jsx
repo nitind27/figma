@@ -27,7 +27,7 @@ const DesktopNav = ({ menuItems }) => {
             <Link
               key={index}
               to={item.path}
-              className="px-6 py-2.5 btn-gradient text-white text-sm font-medium rounded-md transition-all shadow-md"
+              className="px-6 py-2.5 btn-gradient text-white text-sm font-medium rounded-md transition-all shadow-md "
             >
               {item.label}
             </Link>

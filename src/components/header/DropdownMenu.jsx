@@ -53,23 +53,25 @@ const DropdownMenu = ({
       </button>
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2"
-          >
-            {items.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </motion.div>
+       <motion.div
+       initial={{ opacity: 0, y: -10 }}
+       animate={{ opacity: 1, y: 0 }}
+       exit={{ opacity: 0, y: -10 }}
+       className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-2xl border border-gray-100 py-2 z-[1000]"
+     >
+       {items.map((item) => (
+         <Link
+           key={item.path}
+           to={item.path}
+           onClick={() => setIsOpen(false)}
+           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-all"
+         >
+           {item.label}
+         </Link>
+       ))}
+     </motion.div>
+     
+      
         )}
       </AnimatePresence>
     </div>
